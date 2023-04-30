@@ -1,9 +1,10 @@
 package fr.thefox580.theevent580;
 
-import fr.thefox580.theevent580.commands.FlySpeed;
 import fr.thefox580.theevent580.commands.StartTp;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.Objects;
 
 public class main extends JavaPlugin {
 
@@ -12,8 +13,7 @@ public class main extends JavaPlugin {
         // Plugin startup logic
         Bukkit.getLogger().info("TheEvent580's plugin started");
 
-        getCommand("starttp").setExecutor(new StartTp());
-        //getCommand("flyspeed").setExecutor(new FlySpeed());
+        Objects.requireNonNull(getCommand("starttp")).setExecutor(new StartTp());
     }
 
     @Override

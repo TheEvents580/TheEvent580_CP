@@ -1,0 +1,18 @@
+name: TheEvent580
+version: '${project.version}'
+main: fr.thefox580.theevent580.main
+api-version: 1.19
+prefix: TheEvent580 - Console
+authors: [TheFox580]
+description: TheEvent580's plugin
+website: https://www.solo.to/thefox580
+
+commands:
+  starttp:
+    description: Teleports the player to the decision crystal
+    permission: op
+    permission-message: '&cThis command does not exist'
+#  flyspeed:
+#    description: Changes the fly speed of the executor
+#    permission: op
+#    permission-message: '&cThis command does not exist'

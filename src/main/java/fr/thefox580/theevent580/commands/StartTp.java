@@ -21,7 +21,7 @@ public class StartTp implements CommandExecutor {
             }
             else{
                 for (Player player : Bukkit.getOnlinePlayers()){
-                    player.teleport(new Location(Bukkit.getWorld("world"), 0, 250, 0));
+                    player.teleport(new Location(Bukkit.getWorld("world"), 0.5, 250, 0.5));
                 }
                 p.sendMessage("[" + ChatColor.RED + ChatColor.BOLD + "TheEvent580 - Admin" + ChatColor.RESET + "] Telepored all players to the decision crystal !");
             }
@@ -30,7 +30,7 @@ public class StartTp implements CommandExecutor {
         else if(commandSender instanceof ConsoleCommandSender){
             ConsoleCommandSender console = (ConsoleCommandSender) commandSender;
             for (Player player : Bukkit.getOnlinePlayers()){
-                player.teleport(new Location(Bukkit.getWorld("world"), 0, 250, 0));
+                player.teleport(new Location(Bukkit.getWorld("world"), 0.5, 250, 0.5));
             }
             console.sendMessage("[" + ChatColor.RED + ChatColor.BOLD + "TheEvent580 - Admin" + ChatColor.RESET + "] Telepored all players to the decision crystal !");
         }

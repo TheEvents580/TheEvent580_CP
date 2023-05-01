@@ -41,7 +41,7 @@
                         </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <outputFile>C:\Users\ellio\Code\Java\TheEvent580\server\plugins\TheEvent580-Plugin.jar</outputFile>
+                            <outputFile>C:\Users\ellio\Code\Java\TheEvent580\server\plugins\TheEvent580 - Plugin.jar</outputFile>
                         </configuration>
                     </execution>
                 </executions>

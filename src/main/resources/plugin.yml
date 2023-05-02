@@ -9,7 +9,11 @@ website: https://www.solo.to/thefox580
 
 commands:
   starttp:
-    description: Teleports the player to the decision crystal
+    description: Teleports the player to the decision crystal (when the event starts)
+    permission: op
+    permission-message: '&cThis command does not exist'
+  gametp:
+    description: Teleports the player to the decision crystal (after the 1st game)
     permission: op
     permission-message: '&cThis command does not exist'
 #  flyspeed:

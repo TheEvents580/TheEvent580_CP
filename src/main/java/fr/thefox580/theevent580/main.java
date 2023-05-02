@@ -1,5 +1,6 @@
 package fr.thefox580.theevent580;
 
+import fr.thefox580.theevent580.commands.GameTp;
 import fr.thefox580.theevent580.commands.StartTp;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -14,6 +15,7 @@ public class main extends JavaPlugin {
         Bukkit.getLogger().info("TheEvent580's plugin started");
 
         Objects.requireNonNull(getCommand("starttp")).setExecutor(new StartTp());
+        Objects.requireNonNull(getCommand("gametp")).setExecutor(new GameTp());
     }
 
     @Override

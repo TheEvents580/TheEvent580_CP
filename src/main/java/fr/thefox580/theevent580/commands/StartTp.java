@@ -2,6 +2,7 @@ package fr.thefox580.theevent580.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -18,6 +19,11 @@ public class StartTp implements CommandExecutor {
         else{
             for (Player player : Bukkit.getOnlinePlayers()){
                 player.teleport(new Location(Bukkit.getWorld("world"), 0.5, 251, 0.5));
+                if (player.hasPermission("group.spectators")){
+                    player.setGameMode(GameMode.SPECTATOR);
+                } else {
+                    player.setGameMode(GameMode.ADVENTURE);
+                }
             }
             commandSender.sendMessage("[" + ChatColor.RED + ChatColor.BOLD + "TheEvent580 - Admin" + ChatColor.RESET + "] Teleported all players to the decision crystal !");
             }

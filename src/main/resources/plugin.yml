@@ -16,7 +16,7 @@ commands:
     description: Teleports the player to the decision crystal (after the 1st game)
     permission: op
     permission-message: '&cThis command does not exist'
-#  flyspeed:
-#    description: Changes the fly speed of the executor
+#  setrp:
+#    description: Set a resource pack to a player entered as a parameter as well as an url in a second parameter
 #    permission: op
 #    permission-message: '&cThis command does not exist'

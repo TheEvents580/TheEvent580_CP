@@ -1,6 +1,7 @@
 package fr.thefox580.theevent580;
 
 import fr.thefox580.theevent580.commands.GameTp;
+import fr.thefox580.theevent580.commands.SetRP;
 import fr.thefox580.theevent580.commands.StartTp;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
@@ -16,6 +17,7 @@ public class main extends JavaPlugin implements Listener {
 
         getCommand("starttp").setExecutor(new StartTp());
         getCommand("gametp").setExecutor(new GameTp());
+        getCommand("setrp").setExecutor(new SetRP());
 
     }
 

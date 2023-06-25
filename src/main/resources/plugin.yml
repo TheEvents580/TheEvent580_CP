@@ -20,3 +20,7 @@ commands:
     description: Set a resource pack to a player entered as a parameter as well as an url in a second parameter
     permission: op
     permission-message: '&cThis command does not exist'
+  rideplayer:
+    description: Make a player ride another player
+    permission: op
+    permission-message: '&cThis command does not exist'

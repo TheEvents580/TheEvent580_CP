@@ -1,26 +1,19 @@
-name: TheEvent580
-version: '${project.version}'
+name: TheEvent580-Plugin
 main: fr.thefox580.theevent580.main
-api-version: 1.19
-prefix: TheEvent580 - Console
-authors: [TheFox580]
-description: TheEvent580's plugin
-website: https://www.solo.to/thefox580
+version: 1.4
+author: TheFox580
+description: TheEvent580's Plugin
 
 commands:
   starttp:
-    description: Teleports the player to the decision crystal (when the event starts)
+    description: Tp after start
     permission: op
-    permission-message: '&cThis command does not exist'
   gametp:
-    description: Teleports the player to the decision crystal (after the 1st game)
+    description: Tp after games
     permission: op
-    permission-message: '&cThis command does not exist'
   setrp:
-    description: Set a resource pack to a player entered as a parameter as well as an url in a second parameter
-    permission: op
-    permission-message: '&cThis command does not exist'
+      description: Set a rp to a player
+      permission: op
   rideplayer:
-    description: Make a player ride another player
-    permission: op
-    permission-message: '&cThis command does not exist'
+      description: Ride a player
+      permission: op

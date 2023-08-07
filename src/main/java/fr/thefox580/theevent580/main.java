@@ -1,9 +1,6 @@
 package fr.thefox580.theevent580;
 
-import fr.thefox580.theevent580.commands.GameTp;
-import fr.thefox580.theevent580.commands.Ride;
-import fr.thefox580.theevent580.commands.SetRP;
-import fr.thefox580.theevent580.commands.StartTp;
+import fr.thefox580.theevent580.commands.*;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;

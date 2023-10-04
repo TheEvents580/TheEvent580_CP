@@ -1,11 +1,12 @@
 package fr.thefox580.theevent580;
 
 import fr.thefox580.theevent580.commands.*;
+import fr.thefox580.theevent580.listeners.onJoinEvent;
 import org.bukkit.Bukkit;
-import org.bukkit.event.Listener;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class main extends JavaPlugin implements Listener {
+public class main extends JavaPlugin{
 
 
     @Override
@@ -17,6 +18,8 @@ public class main extends JavaPlugin implements Listener {
         getCommand("gametp").setExecutor(new GameTp());
         getCommand("setrp").setExecutor(new SetRP());
         getCommand("rideplayer").setExecutor(new Ride());
+
+        getServer().getPluginManager().registerEvents(new onJoinEvent(), this);
 
     }
 

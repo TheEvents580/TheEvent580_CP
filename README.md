@@ -1,6 +1,6 @@
 # TheEvent580 - Custom Plugin
 
-The custom plugin made in Java for TheEvent580
+The custom plugin made in Java for [TheEvent580](https://github.com/TheFox580/TheEvent580)
 
 I am not that good in java, so my code is probably as bad as the the skript one
 

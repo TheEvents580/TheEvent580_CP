@@ -1,9 +1,8 @@
 package fr.thefox580.theevent580;
 
 import fr.thefox580.theevent580.commands.*;
-import fr.thefox580.theevent580.listeners.onJoinEvent;
+import fr.thefox580.theevent580.listeners.*;
 import org.bukkit.Bukkit;
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class main extends JavaPlugin{
@@ -20,6 +19,7 @@ public class main extends JavaPlugin{
         getCommand("rideplayer").setExecutor(new Ride());
 
         getServer().getPluginManager().registerEvents(new onJoinEvent(), this);
+        getServer().getPluginManager().registerEvents(new onLeaveEvent(), this);
 
     }
 

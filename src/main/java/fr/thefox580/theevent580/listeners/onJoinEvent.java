@@ -43,10 +43,10 @@ public class onJoinEvent implements Listener {
                     }
                 }
             } else if (player.isWhitelisted()){
-                player.kickPlayer("Sorry, but you're not allowed to join the server yet !");
-
+                if (!player.hasPermission("theevent580.tester")){
+                    player.kickPlayer("Sorry, but you're not allowed to join the server yet !");
+                }
             }
         }
     }
-
 }

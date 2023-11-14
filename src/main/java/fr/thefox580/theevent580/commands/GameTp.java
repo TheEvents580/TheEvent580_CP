@@ -8,9 +8,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
 
-public class GameTp implements CommandExecutor, Listener {
+public class GameTp implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
 
@@ -48,9 +47,7 @@ public class GameTp implements CommandExecutor, Listener {
                 }
             }
             commandSender.sendMessage("[" + ChatColor.RED + ChatColor.BOLD + "TheEvent580 - Admin" + ChatColor.RESET + "] Teleported all players to the decision crystal !");
-
         }
-
         return true;
     }
 }

@@ -1,5 +1,7 @@
 package fr.thefox580.theevent580.listeners;
+import fr.thefox580.theevent580.main;
 
+import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -9,9 +11,21 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 public class onJoinEvent implements Listener {
 
+    private final main advMain;
+
+    public onJoinEvent(main advMain) {
+        this.advMain = advMain;
+    }
+
     @EventHandler
     public void playerJoinsEvent(PlayerJoinEvent event){
+        event.setJoinMessage("");
         Player player = event.getPlayer();
+
+        Component component = Component.translatable("%nox_uuid%"+player.getUniqueId()+",false,0,0,1.0","This is shown for non-Noxesium clients");
+
+        advMain.adventure().players().sendMessage(component);
+
         if (player.hasPermission("group.spectators")){
             event.setJoinMessage("["+ ChatColor.GREEN +"+"+ChatColor.RESET +"] "+ChatColor.DARK_GRAY +player.getName());
         }

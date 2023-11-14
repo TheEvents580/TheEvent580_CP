@@ -31,7 +31,7 @@ public class main extends JavaPlugin{
         getCommand("rideplayer").setExecutor(new Ride());
 
         getServer().getPluginManager().registerEvents(new onJoinEvent(this), this);
-        getServer().getPluginManager().registerEvents(new onLeaveEvent(), this);
+        getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this);
 
     }
 

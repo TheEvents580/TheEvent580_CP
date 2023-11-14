@@ -2,6 +2,7 @@ package fr.thefox580.theevent580.listeners;
 import fr.thefox580.theevent580.main;
 
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -21,45 +22,47 @@ public class onJoinEvent implements Listener {
     public void playerJoinsEvent(PlayerJoinEvent event){
         event.setJoinMessage("");
         Player player = event.getPlayer();
+        TextColor color = TextColor.color(255, 255, 255);
+        Component component = Component.translatable("%nox_uuid%"+player.getUniqueId()+",false,0,-1,1","\uD83D\uDC64");
 
-        Component component = Component.translatable("%nox_uuid%"+player.getUniqueId()+",false,0,0,1.0","This is shown for non-Noxesium clients");
-
-        advMain.adventure().players().sendMessage(component);
 
         if (player.hasPermission("group.spectators")){
-            event.setJoinMessage("["+ ChatColor.GREEN +"+"+ChatColor.RESET +"] "+ChatColor.DARK_GRAY +player.getName());
+            color = TextColor.color(85, 85, 85);
         }
-        else {
-            if (player.hasPermission("group.rouge")) {
-                event.setJoinMessage("[" + ChatColor.GREEN + "+" + ChatColor.RESET + "] " + ChatColor.RED + player.getName());
-            } else if (player.hasPermission("group.orange")) {
-                event.setJoinMessage("[" + ChatColor.GREEN + "+" + ChatColor.RESET + "] " + ChatColor.GOLD + player.getName());
-            } else if (player.hasPermission("group.jaune")) {
-                event.setJoinMessage("[" + ChatColor.GREEN + "+" + ChatColor.RESET + "] " + ChatColor.YELLOW + player.getName());
-            } else if (player.hasPermission("group.vert")) {
-                event.setJoinMessage("[" + ChatColor.GREEN + "+" + ChatColor.RESET + "] " + ChatColor.GREEN + player.getName());
-            } else if (player.hasPermission("group.bleu_clair")) {
-                event.setJoinMessage("[" + ChatColor.GREEN + "+" + ChatColor.RESET + "] " + ChatColor.AQUA + player.getName());
-            } else if (player.hasPermission("group.bleu")) {
-                event.setJoinMessage("[" + ChatColor.GREEN + "+" + ChatColor.RESET + "] " + ChatColor.DARK_BLUE + player.getName());
-            } else if (player.hasPermission("group.violet")) {
-                event.setJoinMessage("[" + ChatColor.GREEN + "+" + ChatColor.RESET + "] " + ChatColor.DARK_PURPLE + player.getName());
-            } else if (player.hasPermission("group.rose")) {
-                event.setJoinMessage("[" + ChatColor.GREEN + "+" + ChatColor.RESET + "] " + ChatColor.LIGHT_PURPLE + player.getName());
-            } else {
-                event.setJoinMessage("[" + ChatColor.GREEN + "+" + ChatColor.RESET + "] " + player.getName());
-                for (Player p : Bukkit.getOnlinePlayers()) {
-                    if (p.hasPermission("theevent580.staff")) {
-                        p.sendMessage("[" + ChatColor.RED + ChatColor.BOLD + "TheEvent580 - Staff" + ChatColor.RESET + "] Player "
-                                + player.getName() + "has joined the server but isn't assigned to a color (1st time playing / New color not assigned ? / Server not whitelisted ?)");
-                    }
+        else if (player.hasPermission("group.rouge")) {
+            color = TextColor.color(255, 85, 85);
+        } else if (player.hasPermission("group.orange")) {
+            color = TextColor.color(255, 170, 0);
+        } else if (player.hasPermission("group.jaune")) {
+            color = TextColor.color(255, 255, 85);
+        } else if (player.hasPermission("group.vert")) {
+            color = TextColor.color(85, 255, 85);
+        } else if (player.hasPermission("group.bleu_clair")) {
+            color = TextColor.color(85, 255, 255);
+        } else if (player.hasPermission("group.bleu")) {
+            color = TextColor.color(85, 85, 255);
+        } else if (player.hasPermission("group.violet")) {
+            color = TextColor.color(170, 0, 170);
+        } else if (player.hasPermission("group.rose")) {
+            color = TextColor.color(255, 85, 255);
+        } else {
+            for (Player p : Bukkit.getOnlinePlayers()) {
+                if (p.hasPermission("theevent580.staff")) {
+                    p.sendMessage("[" + ChatColor.RED + ChatColor.BOLD + "TheEvent580 - Staff" + ChatColor.RESET + "] Player "
+                            + player.getName() + "has joined the server but isn't assigned to a color (1st time playing / New color not assigned ? / Server not whitelisted ?)");
                 }
             }
-            if (System.currentTimeMillis() / 1000 > 1700938800) {
-                if (player.isWhitelisted()){
-                    if (!player.hasPermission("theevent580.tester")){
-                        player.kickPlayer("Sorry, but you're not allowed to join the server yet !");
-                    }
+        }
+        Component message = Component.text('[')
+                .append(Component.text('+', TextColor.color(85, 255, 85)))
+                .append(Component.text("] ", TextColor.color(255, 255, 255)))
+                .append(component)
+                .append(Component.text(" "+player.getName(), color));
+        advMain.adventure().players().sendMessage(message);
+        if (System.currentTimeMillis() / 1000 > 1700938800) {
+            if (player.isWhitelisted()){
+                if (!player.hasPermission("theevent580.tester")){
+                    player.kickPlayer("Sorry, but you're not allowed to join the server yet !");
                 }
             }
         }

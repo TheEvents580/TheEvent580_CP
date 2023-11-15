@@ -13,7 +13,7 @@ public class main extends JavaPlugin{
 
     public @NonNull BukkitAudiences adventure() {
         if (this.adventure == null){
-            throw new IllegalStateException("Tried to access Adventure when the plugin was disabled");
+            throw new IllegalStateException("Tried to access Adventure when the plugin was disabled"); //Tell the plugin Adventure is already used
         }
         return this.adventure;
     }
@@ -21,25 +21,26 @@ public class main extends JavaPlugin{
     @Override
     public void onEnable() {
         // Plugin startup logic
-        Bukkit.getLogger().info("TheEvent580's plugin started");
+        Bukkit.getLogger().info("TheEvent580's plugin started"); //Send a message on plugin start
 
-        this.adventure = BukkitAudiences.create(this);
+        this.adventure = BukkitAudiences.create(this); //Implements Adventure to the plugin
 
-        getCommand("starttp").setExecutor(new StartTp());
-        getCommand("gametp").setExecutor(new GameTp());
-        getCommand("setrp").setExecutor(new SetRP());
-        getCommand("rideplayer").setExecutor(new Ride());
+        getCommand("starttp").setExecutor(new StartTp()); //Add the /starttp command to the plugin
+        getCommand("gametp").setExecutor(new GameTp()); //Add the /gametp command to the plugin
+        getCommand("setrp").setExecutor(new SetRP()); //Add the /setrp command to the plugin
+        getCommand("rideplayer").setExecutor(new Ride()); //Add the /rideplayer command to the plugin
 
-        getServer().getPluginManager().registerEvents(new onJoinEvent(this), this);
-        getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this);
-        getServer().getPluginManager().registerEvents(new onDeathEvent(this), this);
+        getServer().getPluginManager().registerEvents(new onJoinEvent(this), this); //Registers the join message on player join to the plugin
+        getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this); //Registers the leave message on player leave to the plugin
+        getServer().getPluginManager().registerEvents(new onDeathEvent(), this); //Registers the death message on player death to the plugin
+        getServer().getPluginManager().registerEvents(new onEntityDeathEvent(this), this); //Registers the entity death message on entity death to the plugin
 
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        Bukkit.getLogger().info("TheEvent580's plugin stopped");
+        Bukkit.getLogger().info("TheEvent580's plugin stopped"); //Send a message on plugin stop
 
     }
 }

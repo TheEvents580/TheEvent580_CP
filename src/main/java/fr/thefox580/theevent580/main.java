@@ -32,6 +32,7 @@ public class main extends JavaPlugin{
 
         getServer().getPluginManager().registerEvents(new onJoinEvent(this), this);
         getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this);
+        getServer().getPluginManager().registerEvents(new onDeathEvent(this), this);
 
     }
 

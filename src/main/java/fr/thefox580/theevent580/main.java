@@ -32,8 +32,7 @@ public class main extends JavaPlugin{
 
         getServer().getPluginManager().registerEvents(new onJoinEvent(this), this); //Registers the join message on player join to the plugin
         getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this); //Registers the leave message on player leave to the plugin
-        getServer().getPluginManager().registerEvents(new onDeathEvent(), this); //Registers the death message on player death to the plugin
-        getServer().getPluginManager().registerEvents(new onEntityDeathEvent(this), this); //Registers the entity death message on entity death to the plugin
+        getServer().getPluginManager().registerEvents(new onDeathEvent(this), this); //Registers the death message on player death to the plugin
 
     }
 

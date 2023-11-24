@@ -8,6 +8,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 
+import java.util.Random;
+
 public class onDeathEvent implements Listener {
     // Next 4 lines of code : Setting up Adventure
 
@@ -15,6 +17,16 @@ public class onDeathEvent implements Listener {
 
     public onDeathEvent(main advMain) {
         this.advMain = advMain;
+    }
+
+    static String[] killMessage = {"'s game stopped working...", " should uninstall the game", " didn't know the game",
+            " fell off", "should go back to studying", " would be better at Fortnite", " did not buy enough shares",
+            " ate an apple", "failed the ready check at the start of the event"}; //Set an Array with death messages
+
+    static String killMessageFinal(){ //Function to choose a random message
+        Random random = new Random(); //Set a random number
+        int randomNumberInArray = random.nextInt(7); //Choose a random number between 0-6
+        return killMessage[randomNumberInArray]; //Returns the String for the message
     }
 
     @EventHandler
@@ -58,13 +70,14 @@ public class onDeathEvent implements Listener {
             teamVictim = '目'; //Set the tag of the player's team
         }
         event.setDeathMessage(""); //Clear death message
+
         if (killer == null){ //If player dies to a NPC
             Component message = Component.text("[") //Set custom death message
                     .append(Component.text("☠",TextColor.color(255, 85, 85))) //Set custom death message
                     .append(Component.text("] " + teamVictim,TextColor.color(255, 255, 255))) //Set custom death message
                     .append(componentVictim)
                     .append(Component.text(victim.getName(), colorVictim)) //Set custom death message
-                    .append(Component.text("'s game stopped working ...",TextColor.color(170, 170, 170))); //Set custom death message
+                    .append(Component.text(killMessageFinal(),TextColor.color(170, 170, 170))); //Set custom death message
             advMain.adventure().players().sendMessage(message);
         }
         else {

@@ -53,7 +53,7 @@ public class onJoinEvent implements Listener {
 
         }
         else if (player.hasPermission("group.bleu")) { //If the player is in blue team
-            color = TextColor.color(85, 85, 255); //Set the color to blue
+            color = TextColor.color(0, 0, 170); //Set the color to blue
 
         }
         else if (player.hasPermission("group.violet")) { //If the player is in purple team

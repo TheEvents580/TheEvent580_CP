@@ -76,10 +76,10 @@ public class getGamePoints implements CommandExecutor {
                             .append(component)
                             .append(Component.text(' ')
                             .append(Component.text(sender.getName(), TextColor.color(color))
-                            .append(Component.text(" currently has " + gamePointsPlayer + " points", TextColor.color(255, 255, 255))))));
+                            .append(Component.text(" currently has " + gamePointsPlayer + " game points", TextColor.color(255, 255, 255))))));
                 }
                 else {
-                    commandSender.sendMessage("Player " + player.getName() + " currently has " + gamePointsPlayer + " points");
+                    commandSender.sendMessage("Player " + player.getName() + " currently has " + gamePointsPlayer + " game points");
                 }
             }
         }

@@ -39,9 +39,9 @@ public class addAndRemoveGamePoints implements CommandExecutor {
 
                     if (gamePointsPlayer < 0){
                         strGamePoints = strGamePoints.substring(1);
-                        commandSender.sendMessage("Removed "+ strGamePoints + " points from player " + player.getName());
+                        commandSender.sendMessage("Removed "+ strGamePoints + " game points from player " + player.getName());
                     } else {
-                        commandSender.sendMessage("Added " + gamePointsPlayer + " points to player " + player.getName());
+                        commandSender.sendMessage("Added " + gamePointsPlayer + " game points to player " + player.getName());
                     }
 
                     this.plugin.getConfig().set("points."+player.getUniqueId(), gamePointsPlayer);

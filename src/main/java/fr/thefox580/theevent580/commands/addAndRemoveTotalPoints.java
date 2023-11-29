@@ -39,9 +39,9 @@ public class addAndRemoveTotalPoints implements CommandExecutor {
 
                     if (totalPointsPlayer < 0){
                         strTotalPoints = strTotalPoints.substring(1);
-                        commandSender.sendMessage("Removed "+ strTotalPoints + " points from player " + player.getName());
+                        commandSender.sendMessage("Removed "+ strTotalPoints + " total points from player " + player.getName());
                     } else {
-                        commandSender.sendMessage("Added " + totalPointsPlayer + " points to player " + player.getName());
+                        commandSender.sendMessage("Added " + totalPointsPlayer + " total points to player " + player.getName());
                     }
 
                     this.plugin.getConfig().set("points."+player.getUniqueId(), totalPointsPlayer);

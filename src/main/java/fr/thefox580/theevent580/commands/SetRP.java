@@ -23,7 +23,7 @@ public class SetRP implements CommandExecutor {
         byte[] bytes = DatatypeConverter.parseHexBinary(toByte);
 
         if (target != null){
-            target.setResourcePack(URL, bytes);
+            target.setResourcePack(URL, bytes, true);
         }
 
         else{

@@ -31,7 +31,7 @@ public class addAndRemoveGamePoints implements CommandExecutor {
             if (player != null){
                 if (player.isOnline()){
 
-                    long gamePointsPlayer = this.plugin.getConfig().getLong("game_points."+player.getUniqueId());
+                    long gamePointsPlayer = this.plugin.getConfig().getLong("game-points."+player.getUniqueId());
 
                     gamePointsPlayer += Long.parseLong(strings[1]);
 

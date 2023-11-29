@@ -26,7 +26,7 @@ public class getTotalPoints implements CommandExecutor {
         Player player = Bukkit.getPlayer(strings[0]);
         if (player != null){
             if (player.isOnline()){
-                long totalPointsPlayer = this.plugin.getConfig().getInt("total_points."+player.getUniqueId());
+                long totalPointsPlayer = this.plugin.getConfig().getInt("total-points."+player.getUniqueId());
 
                 if (commandSender instanceof Player){
                     Player sender = Bukkit.getPlayer(commandSender.getName());

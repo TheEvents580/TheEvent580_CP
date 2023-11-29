@@ -31,7 +31,7 @@ public class addAndRemoveTotalPoints implements CommandExecutor {
             if (player != null){
                 if (player.isOnline()){
 
-                    long totalPointsPlayer = this.plugin.getConfig().getLong("total_points."+player.getUniqueId());
+                    long totalPointsPlayer = this.plugin.getConfig().getLong("total-points."+player.getUniqueId());
 
                     totalPointsPlayer += Long.parseLong(strings[1]);
 

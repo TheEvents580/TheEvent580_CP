@@ -18,3 +18,21 @@ commands:
   rideplayer:
       description: Ride a player
       permission: op
+  points:
+    description: Add / removes points to a player
+    permission: op
+  gamepoints:
+    description: Add / removes game points to a player
+    permission: op
+  totalpoints:
+    description: Add / removes total points to a player
+    permission: op
+  getpoints:
+    description: Shows the points of player in arg to commandSender
+    permission: op
+  getgamepoints:
+    description: Shows the points of player in arg to commandSender
+    permission: op
+  gettotalpoints:
+    description: Shows the points of player in arg to commandSender
+    permission: op

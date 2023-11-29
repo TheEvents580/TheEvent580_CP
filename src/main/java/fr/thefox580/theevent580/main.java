@@ -25,14 +25,23 @@ public class main extends JavaPlugin{
 
         this.adventure = BukkitAudiences.create(this); //Implements Adventure to the plugin
 
+        saveDefaultConfig(); //Saves the config in the plugin folder
+
         getCommand("starttp").setExecutor(new StartTp()); //Add the /starttp command to the plugin
         getCommand("gametp").setExecutor(new GameTp()); //Add the /gametp command to the plugin
         getCommand("setrp").setExecutor(new SetRP()); //Add the /setrp command to the plugin
         getCommand("rideplayer").setExecutor(new Ride()); //Add the /rideplayer command to the plugin
+        getCommand("points").setExecutor(new addAndRemovePoints(this)); //Add the /points command to the plugin
+        getCommand("gamepoints").setExecutor(new addAndRemoveGamePoints(this)); //Add the /gamepoints command to the plugin
+        getCommand("totalpoints").setExecutor(new addAndRemoveTotalPoints(this)); //Add the /totalpoints command to the plugin
+        getCommand("getpoints").setExecutor(new getPoints(this)); //Add the /getpoints command to the plugin
+        getCommand("getgamepoints").setExecutor(new getGamePoints(this)); //Add the /getgamepoints command to the plugin
+        getCommand("gettotalpoints").setExecutor(new getTotalPoints(this)); //Add the /gettotalpoints command to the plugin
 
         getServer().getPluginManager().registerEvents(new onJoinEvent(this), this); //Registers the join message on player join to the plugin
         getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this); //Registers the leave message on player leave to the plugin
         getServer().getPluginManager().registerEvents(new onDeathEvent(this), this); //Registers the death message on player death to the plugin
+        getServer().getPluginManager().registerEvents(new onMessage(this), this); //Registers the custom message on player message to the plugin
 
     }
 

@@ -37,6 +37,9 @@ public class main extends JavaPlugin{
         getCommand("getpoints").setExecutor(new getPoints(this)); //Add the /getpoints command to the plugin
         getCommand("getgamepoints").setExecutor(new getGamePoints(this)); //Add the /getgamepoints command to the plugin
         getCommand("gettotalpoints").setExecutor(new getTotalPoints(this)); //Add the /gettotalpoints command to the plugin
+        getCommand("setglobalmultiplier").setExecutor(new setGlobalMultiplier(this)); //Add the /setglobalmultiplier commadn to the plugin
+        getCommand("getglobalmultiplier").setExecutor(new getGlobalMultiplier(this)); //Add the /getglobalmultiplier commadn to the plugin
+        getCommand("gamemultiplier").setExecutor(new addAndRemoveGameMultiplier(this)); //Add the /gamemultiplier commadn to the plugin
 
         getServer().getPluginManager().registerEvents(new onJoinEvent(this), this); //Registers the join message on player join to the plugin
         getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this); //Registers the leave message on player leave to the plugin

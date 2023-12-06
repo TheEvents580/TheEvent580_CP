@@ -8,12 +8,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class addAndRemoveGamePoints implements CommandExecutor {
+public class addAndRemoveGameMultiplier implements CommandExecutor {
 
     private final main plugin;
     private final main advMain;
 
-    public addAndRemoveGamePoints(main plugin) {
+    public addAndRemoveGameMultiplier(main plugin) {
         this.plugin = plugin;
         this.advMain = plugin;
     }
@@ -31,20 +31,20 @@ public class addAndRemoveGamePoints implements CommandExecutor {
             if (player != null){
                 if (player.isOnline()){
 
-                    long gamePointsPlayer = this.plugin.getConfig().getLong("game_points."+player.getUniqueId());
+                    double gameMultiplierPlayer = this.plugin.getConfig().getLong("multiplier_game."+player.getUniqueId());
 
-                    gamePointsPlayer += Long.parseLong(strings[1]);
+                    gameMultiplierPlayer += Double.parseDouble(strings[1]);
 
-                    String strGamePoints = strings[1];
+                    String strGameMultiplier = strings[1];
 
-                    if (gamePointsPlayer < 0){
-                        strGamePoints = strGamePoints.substring(1);
-                        commandSender.sendMessage("Removed "+ strGamePoints + " game points from player " + player.getName());
+                    if (gameMultiplierPlayer < 0){
+                        strGameMultiplier = strGameMultiplier.substring(1);
+                        commandSender.sendMessage("Removed "+ strGameMultiplier + " game points from player " + player.getName());
                     } else {
-                        commandSender.sendMessage("Added " + gamePointsPlayer + " game points to player " + player.getName());
+                        commandSender.sendMessage("Added " + strGameMultiplier + " game points to player " + player.getName());
                     }
 
-                    this.plugin.getConfig().set("game_points."+player.getUniqueId(), gamePointsPlayer);
+                    this.plugin.getConfig().set("multiplier_game."+player.getUniqueId(), gameMultiplierPlayer);
                     this.plugin.saveConfig();
 
                 }

@@ -1,9 +1,3 @@
-timer-mode : false
-timer-minutes : 0
-timer-seconds : 0
-
-game-world : "Hub"
-
 spectator-list-uuid:
   - "dc833b85-3cba-4ebd-8f4d-febc09f02422"
   - "252fda4d-bb94-4449-876d-fec8d172dda0"

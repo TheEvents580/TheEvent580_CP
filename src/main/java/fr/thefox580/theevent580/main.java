@@ -50,7 +50,7 @@ public class main extends JavaPlugin{
         getServer().getPluginManager().registerEvents(new onDeathEvent(this), this); //Registers the death message on player death to the plugin
         getServer().getPluginManager().registerEvents(new onMessage(this), this); //Registers the custom message on player message to the plugin
 
-        BukkitTask reloadScoreboadTask = new reloadScoreboard(this).runTaskTimer(this, 0L, 1L);
+        BukkitTask reloadScoreboardTask = new reloadScoreboard(this).runTaskTimer(this, 0L, 1L);
 
     }
 

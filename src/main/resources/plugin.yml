@@ -29,10 +29,18 @@ commands:
     permission: op
   getpoints:
     description: Shows the points of player in arg to commandSender
-    permission: op
   getgamepoints:
     description: Shows the points of player in arg to commandSender
-    permission: op
   gettotalpoints:
     description: Shows the points of player in arg to commandSender
+  setglobalmultiplier:
+    description: Sets the point multiplier of the next game
+    permission: op
+  getglobalmultiplier:
+    description: Shows the point multiplier of the next game
+  gamemultiplier:
+    description: Add / removes game multipler to the player
+    permission: op
+  settimer:
+    description: Set the timer mode / time
     permission: op

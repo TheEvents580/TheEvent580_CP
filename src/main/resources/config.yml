@@ -1,8 +1,10 @@
-timer-mode : false
-timer-minutes : 0
-timer-seconds : 0
+timer_mode : false
+timer_minutes : 0
+timer_seconds : 0
 
-game-world : "Hub"
+online_players : 0
+
+game_world : "Hub"
 
 spectator_list_uuid:
   - "dc833b85-3cba-4ebd-8f4d-febc09f02422"

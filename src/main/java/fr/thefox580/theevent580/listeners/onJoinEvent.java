@@ -5,6 +5,7 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -27,9 +28,12 @@ public class onJoinEvent implements Listener {
         TextColor color = TextColor.color(255, 255, 255); //Set color of text to white (base for if the player doesn't have a team)
         Component component = Component.translatable("%nox_uuid%"+player.getUniqueId()+",false,0,-1,1","\uD83D\uDC64"); //Setup custom player head
 
+        FileConfiguration config = this.advMain.getConfig();
+        config.set("online_players", config.getInt("online_players") + 1);
 
         if (player.hasPermission("group.spectators")){ //If the player is a spectator
             color = TextColor.color(85, 85, 85); //Set the color to dark gray
+            config.set("online_players", config.getInt("online_players") - 1);
 
         }
         else if (player.hasPermission("group.rouge")) { //If the player is in red team
@@ -81,6 +85,9 @@ public class onJoinEvent implements Listener {
                 }
             }
         }
+
+        this.advMain.saveConfig();
+
     }
 
     @NotNull

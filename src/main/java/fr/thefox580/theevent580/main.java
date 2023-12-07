@@ -2,9 +2,11 @@ package fr.thefox580.theevent580;
 
 import fr.thefox580.theevent580.commands.*;
 import fr.thefox580.theevent580.listeners.*;
+import fr.thefox580.theevent580.tasks.*;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitTask;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 public class main extends JavaPlugin{
@@ -46,6 +48,8 @@ public class main extends JavaPlugin{
         getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this); //Registers the leave message on player leave to the plugin
         getServer().getPluginManager().registerEvents(new onDeathEvent(this), this); //Registers the death message on player death to the plugin
         getServer().getPluginManager().registerEvents(new onMessage(this), this); //Registers the custom message on player message to the plugin
+
+        BukkitTask reloadScoreboadTask = new reloadScoreboard(this).runTaskTimer(this, 0L, 1L);
 
     }
 

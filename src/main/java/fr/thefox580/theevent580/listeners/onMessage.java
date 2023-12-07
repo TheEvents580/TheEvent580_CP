@@ -6,6 +6,7 @@ import net.kyori.adventure.text.format.TextColor;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.ChatColor;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -25,6 +26,7 @@ public class onMessage implements Listener {
         Player player = event.getPlayer();
         String messageContent = event.getMessage();
         boolean bannedWordInMessage = isBannedWordInMessage(messageContent);
+        FileConfiguration config = this.advMain.getConfig();
 
         Component componentPlayer = Component.translatable("%nox_uuid%" + player.getUniqueId() + ",true,0,-1,1", "\uD83D\uDC64"); //Setup custom player head
         TextColor colorPlayer = TextColor.color(255, 255, 255); //Set color of text to white (base for if the player doesn't have a team)
@@ -74,6 +76,7 @@ public class onMessage implements Listener {
             Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
+                    .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('☠')); //Set custom message
@@ -86,6 +89,7 @@ public class onMessage implements Listener {
             Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
+                    .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(170, 0, 0))); //Set custom message
@@ -98,6 +102,7 @@ public class onMessage implements Listener {
             Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
+                    .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(255, 85, 85))); //Set custom message
@@ -110,6 +115,7 @@ public class onMessage implements Listener {
             Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
+                    .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(255, 170, 0))); //Set custom message
@@ -122,6 +128,7 @@ public class onMessage implements Listener {
             Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
+                    .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(255, 255, 85))); //Set custom message
@@ -134,6 +141,7 @@ public class onMessage implements Listener {
             Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
+                    .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(85, 255, 85))); //Set custom message
@@ -146,6 +154,7 @@ public class onMessage implements Listener {
             Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
+                    .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(0, 170, 0))); //Set custom message
@@ -158,6 +167,7 @@ public class onMessage implements Listener {
             Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
+                    .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(0, 170, 170))); //Set custom message
@@ -170,6 +180,7 @@ public class onMessage implements Listener {
             Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
+                    .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(85, 255, 255))); //Set custom message
@@ -182,6 +193,7 @@ public class onMessage implements Listener {
             Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
+                    .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(85, 85, 255))); //Set custom message
@@ -194,6 +206,7 @@ public class onMessage implements Listener {
             Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
+                    .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(0, 0, 170))); //Set custom message
@@ -206,6 +219,7 @@ public class onMessage implements Listener {
             Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
+                    .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(170, 0, 170))); //Set custom message
@@ -218,6 +232,7 @@ public class onMessage implements Listener {
             Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
+                    .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(255, 85, 255))); //Set custom message
@@ -230,6 +245,7 @@ public class onMessage implements Listener {
             Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
+                    .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text(messageContent)); //Set custom message

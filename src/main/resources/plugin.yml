@@ -44,3 +44,5 @@ commands:
   settimer:
     description: Set the timer mode / time
     permission: op
+  pronouns:
+    description: Allows player to set their own pronouns

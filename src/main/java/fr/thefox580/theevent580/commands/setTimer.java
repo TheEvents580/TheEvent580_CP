@@ -23,12 +23,8 @@ public class setTimer implements CommandExecutor {
         if (strings[0].equals("set")){
             config.set("timer_minutes", Integer.valueOf(strings[1]));
             config.set("timer_seconds", Integer.valueOf(strings[2]));
-        } else if (strings[0].equals("toggle")){
-            if (config.getBoolean("timer_mode")){
-                config.set("timer_mode", false);
-            } else {
-                config.set("timer_mode", true);
-            }
+        } else if (strings[0].equals("mode")){
+            config.set("timer_mode", s);
         }
 
         this.plugin.saveConfig();

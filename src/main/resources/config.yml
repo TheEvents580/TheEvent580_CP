@@ -1,4 +1,4 @@
-timer_mode : false
+timer_mode : "Start"
 timer_minutes : 0
 timer_seconds : 0
 

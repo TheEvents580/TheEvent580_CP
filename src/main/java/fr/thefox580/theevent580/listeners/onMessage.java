@@ -28,7 +28,7 @@ public class onMessage implements Listener {
         boolean bannedWordInMessage = isBannedWordInMessage(messageContent);
         FileConfiguration config = this.advMain.getConfig();
 
-        Component componentPlayer = Component.translatable("%nox_uuid%" + player.getUniqueId() + ",true,0,-1,1", "\uD83D\uDC64"); //Setup custom player head
+        Component componentPlayer = Component.translatable("%nox_uuid%" + player.getUniqueId() + ",false,0,-1,1", "\uD83D\uDC64"); //Setup custom player head
         TextColor colorPlayer = TextColor.color(255, 255, 255); //Set color of text to white (base for if the player doesn't have a team)
         char teamPlayer = 'タ'; //Set the tag of the player's team
 
@@ -73,7 +73,7 @@ public class onMessage implements Listener {
 
         else if (messageContent.equals(":skull:")){
 
-            Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
@@ -86,7 +86,7 @@ public class onMessage implements Listener {
 
         else if (messageContent.equals(":darkredlove:")){
 
-            Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
@@ -99,7 +99,7 @@ public class onMessage implements Listener {
 
         else if (messageContent.equals(":redlove:")){
 
-            Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
@@ -112,7 +112,7 @@ public class onMessage implements Listener {
 
         else if (messageContent.equals(":orangelove:")){
 
-            Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
@@ -125,7 +125,7 @@ public class onMessage implements Listener {
 
         else if (messageContent.equals(":yellowlove:")){
 
-            Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
@@ -138,7 +138,7 @@ public class onMessage implements Listener {
 
         else if (messageContent.equals(":limelove:")){
 
-            Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
@@ -151,7 +151,7 @@ public class onMessage implements Listener {
 
         else if (messageContent.equals(":greenlove:")){
 
-            Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
@@ -164,7 +164,7 @@ public class onMessage implements Listener {
 
         else if (messageContent.equals(":cyanlove:")){
 
-            Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
@@ -177,7 +177,7 @@ public class onMessage implements Listener {
 
         else if (messageContent.equals(":lightbluelove:")){
 
-            Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
@@ -190,7 +190,7 @@ public class onMessage implements Listener {
 
         else if (messageContent.equals(":bluelove:")){
 
-            Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
@@ -203,7 +203,7 @@ public class onMessage implements Listener {
 
         else if (messageContent.equals(":darkbluelove:")){
 
-            Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
@@ -216,7 +216,7 @@ public class onMessage implements Listener {
 
         else if (messageContent.equals(":purplelove:")){
 
-            Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
@@ -229,7 +229,7 @@ public class onMessage implements Listener {
 
         else if (messageContent.equals(":pinklove:")){
 
-            Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
@@ -242,7 +242,7 @@ public class onMessage implements Listener {
 
         else {
 
-            Component message = Component.text("] " + teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
@@ -252,7 +252,8 @@ public class onMessage implements Listener {
             advMain.adventure().players().sendMessage(message); //Send custom message
         }
 
-        event.setMessage("");
+        //event.setMessage("");
+        event.setCancelled(true);
 
     }
 

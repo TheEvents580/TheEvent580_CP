@@ -44,6 +44,7 @@ public class main extends JavaPlugin{
         getCommand("gamemultiplier").setExecutor(new addAndRemoveGameMultiplier(this)); //Add the /gamemultiplier command to the plugin
         getCommand("timer").setExecutor(new setTimer(this)); //Add the /settimer command to the plugin
         getCommand("start").setExecutor(new startEvent()); //Add the /start command to the plugin
+        getCommand("pronouns").setExecutor(new pronouns()); //Add the /start command to the plugin
 
         getServer().getPluginManager().registerEvents(new onJoinEvent(this), this); //Registers the join message on player join to the plugin
         getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this); //Registers the leave message on player leave to the plugin

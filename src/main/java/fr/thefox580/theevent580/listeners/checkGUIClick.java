@@ -13,6 +13,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
+import java.util.UUID;
+
 public class checkGUIClick implements Listener {
 
     private final main plugin;
@@ -22,13 +24,17 @@ public class checkGUIClick implements Listener {
     }
 
     @EventHandler
-    public void checkGUIClickEvent(InventoryClickEvent event){
+    public void checkGUIClickEvent(InventoryClickEvent event) {
+
+        FileConfiguration config = plugin.getConfig();
 
         Player player = (Player) event.getWhoClicked();
 
-        if (event.getView().getTitle().equals("Are you sure to start ?")){
+        UUID playerUUID = player.getUniqueId();
+
+        if (event.getView().getTitle().equals("Are you sure to start ?")) {
             event.setCancelled(true);
-            if (event.getCurrentItem().getType() == Material.LIME_CONCRETE || event.getCurrentItem().getType() == Material.RED_CONCRETE){
+            if (event.getCurrentItem().getType() == Material.LIME_CONCRETE || event.getCurrentItem().getType() == Material.RED_CONCRETE) {
 
                 if (event.getCurrentItem().getType() == Material.LIME_CONCRETE) {
                     player.performCommand("timer mode 1");
@@ -39,7 +45,7 @@ public class checkGUIClick implements Listener {
                             .append(Component.text("TheEvent580", TextColor.color(255, 85, 85), TextDecoration.BOLD))
                             .append(Component.text("] Event starting in 1 minute and 30 seconds", TextColor.color(255, 255, 255))));
 
-                    for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                    for (Player loopPlayer : Bukkit.getOnlinePlayers()) {
                         loopPlayer.playSound(loopPlayer, "custom:intro", SoundCategory.VOICE, 1, 1);
                     }
                 }
@@ -47,6 +53,45 @@ public class checkGUIClick implements Listener {
                 player.closeInventory();
             }
         }
-    }
 
+        if (event.getView().getTitle().equals("Choose you pronouns :")) {
+            event.setCancelled(true);
+            if (event.getCurrentItem().getType() == Material.RED_CONCRETE) {
+                config.set("pronouns_1." + playerUUID, "[He");
+                player.sendMessage("Your 1st pronoun has been set to \"He\"");
+            }
+            if (event.getCurrentItem().getType() == Material.ORANGE_CONCRETE) {
+                config.set("pronouns_1." + playerUUID, "[She");
+                player.sendMessage("Your 1st pronoun has been set to \"She\"");
+            }
+            if (event.getCurrentItem().getType() == Material.YELLOW_CONCRETE) {
+                config.set("pronouns_1." + playerUUID, "[They");
+                player.sendMessage("Your 1st pronoun has been set to \"They\"");
+            }
+            if (event.getCurrentItem().getType() == Material.LIME_CONCRETE) {
+                config.set("pronouns_1." + playerUUID, "[Any");
+                player.sendMessage("Your 1st pronoun has been set to \"Any\"");
+            }
+            if (event.getCurrentItem().getType() == Material.GREEN_CONCRETE) {
+                config.set("pronouns_2." + playerUUID, "Him]");
+                player.sendMessage("Your 2nd pronoun has been set to \"Him\"");
+            }
+            if (event.getCurrentItem().getType() == Material.CYAN_CONCRETE) {
+                config.set("pronouns_2." + playerUUID, "Her]");
+                player.sendMessage("Your 2nd pronoun has been set to \"Her\"");
+            }
+            if (event.getCurrentItem().getType() == Material.LIGHT_BLUE_CONCRETE) {
+                config.set("pronouns_2." + playerUUID, "Them]");
+                player.sendMessage("Your 2nd pronoun has been set to \"Them\"");
+            }
+            if (event.getCurrentItem().getType() == Material.BLUE_CONCRETE) {
+                config.set("pronouns_2." + playerUUID, "All]");
+                player.sendMessage("Your 2nd pronoun has been set to \"All\"");
+            }
+
+            if (event.getCurrentItem().getType() == Material.BARRIER) {
+                player.closeInventory();
+            }
+        }
+    }
 }

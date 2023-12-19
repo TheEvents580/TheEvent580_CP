@@ -47,3 +47,5 @@ commands:
   start:
     description: Starts the event
     permission: op
+  pronouns:
+    description: Changes player's pronouns

@@ -44,9 +44,11 @@ public class startEvent implements CommandExecutor {
             blank_meta.setDisplayName("");
             blank.setItemMeta(blank_meta);
 
-            ItemStack[] menu_items = {blank, blank, blank, blank, blank, blank, blank, blank, blank,
-                    blank, blank, yes, blank, blank, blank, no, blank, blank,
-                    blank, blank, blank, blank, blank, blank, blank, blank, blank};
+            ItemStack[] menu_items = {
+                    blank, blank, blank, blank, blank, blank, blank, blank, blank,
+                    blank, blank, yes  , blank, blank, blank, no   , blank, blank,
+                    blank, blank, blank, blank, blank, blank, blank, blank, blank}
+                    ;
             gui.setContents(menu_items);
 
             player.openInventory(gui);

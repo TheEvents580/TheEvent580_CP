@@ -111,8 +111,12 @@ public class reloadScoreboard extends BukkitRunnable {
         Score onlinePlayer = objective.getScore(ChatColor.YELLOW + "" + ChatColor.BOLD + "Online players : " + ChatColor.WHITE + config.getString("online_players"));
         onlinePlayer.setScore(8);
 
-        Score blank2 = objective.getScore("  ");
-        blank2.setScore(7);
+        if (config.getInt("game_count") > 1){
+
+            Score blank2 = objective.getScore("  ");
+            blank2.setScore(7);
+
+        }
 
         for (Player loopedPlayer : Bukkit.getOnlinePlayers()){
             loopedPlayer.setScoreboard(scoreboard);

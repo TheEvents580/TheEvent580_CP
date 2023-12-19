@@ -42,14 +42,17 @@ public class main extends JavaPlugin{
         getCommand("setglobalmultiplier").setExecutor(new setGlobalMultiplier(this)); //Add the /setglobalmultiplier command to the plugin
         getCommand("getglobalmultiplier").setExecutor(new getGlobalMultiplier(this)); //Add the /getglobalmultiplier command to the plugin
         getCommand("gamemultiplier").setExecutor(new addAndRemoveGameMultiplier(this)); //Add the /gamemultiplier command to the plugin
-        getCommand("settimer").setExecutor(new setTimer(this)); //Add the /settimer command to the plugin
+        getCommand("timer").setExecutor(new setTimer(this)); //Add the /settimer command to the plugin
+        getCommand("start").setExecutor(new startEvent()); //Add the /start command to the plugin
 
         getServer().getPluginManager().registerEvents(new onJoinEvent(this), this); //Registers the join message on player join to the plugin
         getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this); //Registers the leave message on player leave to the plugin
         getServer().getPluginManager().registerEvents(new onDeathEvent(this), this); //Registers the death message on player death to the plugin
         getServer().getPluginManager().registerEvents(new onMessage(this), this); //Registers the custom message on player message to the plugin
+        getServer().getPluginManager().registerEvents(new checkGUIClick(this), this); //Registers when a players click in an inventory to the plugin
 
         BukkitTask reloadScoreboadTask = new reloadScoreboard(this).runTaskTimer(this, 0L, 1L);
+        BukkitTask reloadTimerTask = new reloadTimer(this).runTaskTimer(this, 0L, 20L);
 
     }
 

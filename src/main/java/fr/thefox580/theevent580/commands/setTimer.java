@@ -20,15 +20,13 @@ public class setTimer implements CommandExecutor {
 
         FileConfiguration config = this.plugin.getConfig();
 
-        if (strings[0].equals("set")){
-            config.set("timer_minutes", Integer.valueOf(strings[1]));
-            config.set("timer_seconds", Integer.valueOf(strings[2]));
-        } else if (strings[0].equals("toggle")){
-            if (config.getBoolean("timer_mode")){
-                config.set("timer_mode", false);
-            } else {
-                config.set("timer_mode", true);
+        switch (strings[0]) {
+            case "set" -> {
+                config.set("timer_minutes", Integer.valueOf(strings[1]));
+                config.set("timer_seconds", Integer.valueOf(strings[2]));
             }
+            case "toggle" -> config.set("timer_mode", !(config.getBoolean("timer_mode")));
+            case "mode" -> config.set("timer", strings[1]);
         }
 
         this.plugin.saveConfig();

@@ -1,8 +1,10 @@
 timer_mode : false
+timer : "0"
 timer_minutes : 0
 timer_seconds : 0
 
 online_players : 0
+alive_players_sg : 0
 
 game_counter : 1
 last_game : "None"

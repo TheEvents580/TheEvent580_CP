@@ -8,6 +8,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scoreboard.*;
 
+import java.util.Objects;
+
 public class reloadScoreboard extends BukkitRunnable {
 
     private final main plugin;
@@ -35,33 +37,85 @@ public class reloadScoreboard extends BukkitRunnable {
         Score blank0 = objective.getScore("");
         blank0.setScore(12);
 
-        Score timer = objective.getScore(ChatColor.YELLOW + "" + ChatColor.BOLD + "Time : " + config.getInt("timer_minutes") + ":" + config.getInt("timer_seconds"));
-        if (config.getInt("timer_minutes") < 10){
-            if (config.getInt("timer_seconds") < 10) {
-                timer = objective.getScore(ChatColor.YELLOW + "" + ChatColor.BOLD + "Time : 0" + config.getInt("timer_minutes") + ":0" + config.getInt("timer_seconds"));
+        Score timer1 = objective.getScore(ChatColor.YELLOW + "" +ChatColor.BOLD + "Event starting soon");
+        if (config.getString("timer").equals("1")){
+            timer1 = objective.getScore(ChatColor.YELLOW + "" +ChatColor.BOLD + "Event starting in : ");
+        }
+        if (config.getString("timer").equals("2") || config.getString("timer").equals("9")){
+            timer1 = objective.getScore(ChatColor.YELLOW + "" +ChatColor.BOLD + "Opening votes in : ");
+        }
+        if (config.getString("timer").equals("3")){
+            timer1 = objective.getScore(ChatColor.YELLOW + "" +ChatColor.BOLD + "Minigame announced in : ");
+        }
+        if (config.getString("timer").equals("4")){
+            timer1 = objective.getScore(ChatColor.YELLOW + "" +ChatColor.BOLD + "Teleportation to the minigame in : ");
+        }
+        if (config.getString("timer").equals("5")){
+            timer1 = objective.getScore(ChatColor.YELLOW + "" +ChatColor.BOLD + "Minigame starting in : ");
+        }
+        if (config.getString("timer").equals("6")){
+            if (config.getInt("timer_seconds") == 0 && config.getInt("timer_minutes") == 0){
+                timer1 = objective.getScore(ChatColor.YELLOW + "" +ChatColor.BOLD + "Players still alive : ");
             } else {
-                timer = objective.getScore(ChatColor.YELLOW + "" + ChatColor.BOLD + "Time : 0" + config.getInt("timer_minutes") + ":" + config.getInt("timer_seconds"));
+                if (config.getString("game_world").equals("Survival Games")){
+                    timer1 = objective.getScore(ChatColor.YELLOW + "" +ChatColor.BOLD + "Final battle in : ");
+                } else {
+                    timer1 = objective.getScore(ChatColor.YELLOW + "" +ChatColor.BOLD + "Minigame ending in : ");
+                }
             }
-        } else {
-            if (config.getInt("timer_seconds") < 10){
-                timer = objective.getScore(ChatColor.YELLOW + "" + ChatColor.BOLD + "Time : " + config.getInt("timer_minutes") + ":0" + config.getInt("timer_seconds"));
+        }
+        if (config.getString("timer").equals("7")){
+            timer1 = objective.getScore(ChatColor.YELLOW + "" +ChatColor.BOLD + "Back to hub in : ");
+        }
+        if (config.getString("timer").equals("8")){
+            timer1 = objective.getScore(ChatColor.YELLOW + "" +ChatColor.BOLD + "Intermission ends in : ");
+        }
+        if (config.getString("timer").equals("10")){
+            timer1 = objective.getScore(ChatColor.YELLOW + "" +ChatColor.BOLD + "Results in : ");
+        }
+        if (config.getString("timer").equals("End")){
+            timer1 = objective.getScore(ChatColor.YELLOW + "" +ChatColor.BOLD + "Event Over ");
+        }
+
+        timer1.setScore(11);
+
+        Score timer = objective.getScore(" ");
+
+        if (!Objects.equals(config.getString("timer"), "0") && !Objects.equals(config.getString("timer"), "End")){
+            timer = objective.getScore(config.getInt("timer_minutes") + ":" + config.getInt("timer_seconds"));
+            if (config.getString("timer").equals("6")){
+                if (config.getInt("timer_seconds") == 0 && config.getInt("timer_minutes") == 0){
+                    timer = objective.getScore(config.getString("alive_players_sg"));
+                }
+            }
+            if (config.getInt("timer_minutes") < 10){
+                if (config.getInt("timer_seconds") < 10) {
+                    timer = objective.getScore("0" + config.getInt("timer_minutes") + ":0" + config.getInt("timer_seconds"));
+                } else {
+                    timer = objective.getScore("0" + config.getInt("timer_minutes") + ":" + config.getInt("timer_seconds"));
+                }
+            } else {
+                if (config.getInt("timer_seconds") < 10){
+                    timer = objective.getScore(config.getInt("timer_minutes") + ":0" + config.getInt("timer_seconds"));
+                }
             }
         }
 
-        timer.setScore(11);
+        if (!Objects.equals(config.getString("timer"), "End")){
+            timer.setScore(10);
+        }
 
         Score blank1 = objective.getScore(" ");
-        blank1.setScore(10);
+        blank1.setScore(9);
 
-        Score onlinePlayer = objective.getScore(ChatColor.YELLOW + "" + ChatColor.BOLD + "Online players : " + config.getString("online_players"));
-        onlinePlayer.setScore(9);
+        Score onlinePlayer = objective.getScore(ChatColor.YELLOW + "" + ChatColor.BOLD + "Online players : " + ChatColor.WHITE + config.getString("online_players"));
+        onlinePlayer.setScore(8);
 
         Score blank2 = objective.getScore("  ");
-        blank2.setScore(8);
+        blank2.setScore(7);
 
         for (Player loopedPlayer : Bukkit.getOnlinePlayers()){
             loopedPlayer.setScoreboard(scoreboard);
         }
-
     }
 }

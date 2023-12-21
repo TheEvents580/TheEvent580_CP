@@ -49,3 +49,6 @@ commands:
     permission: op
   pronouns:
     description: Changes player's pronouns
+  damage:
+    description: Toggles damage
+    permission: op

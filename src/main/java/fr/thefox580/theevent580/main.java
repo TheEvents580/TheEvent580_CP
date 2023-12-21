@@ -1,8 +1,10 @@
 package fr.thefox580.theevent580;
 
+import com.noxcrew.noxesium.api.protocol.rule.ServerRuleIndices;
 import fr.thefox580.theevent580.commands.*;
 import fr.thefox580.theevent580.listeners.*;
 import fr.thefox580.theevent580.tasks.*;
+import me.superneon4ik.noxesiumutils.feature.rule.impl.BooleanServerRule;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -11,6 +13,8 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 
 public class main extends JavaPlugin{
 
+    private static final BooleanServerRule DISABLE_TRIDENT_SPIN_ATTACK = new BooleanServerRule(ServerRuleIndices.DISABLE_SPIN_ATTACK_COLLISIONS, true);
+    private static final BooleanServerRule DISABLE_BOAT_COLLISIONS = new BooleanServerRule(ServerRuleIndices.DISABLE_BOAT_COLLISIONS, true);
     private BukkitAudiences adventure;
 
     public @NonNull BukkitAudiences adventure() {

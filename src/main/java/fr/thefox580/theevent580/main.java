@@ -18,7 +18,7 @@ public class main extends JavaPlugin{
 
     public @NonNull BukkitAudiences adventure() {
         if (this.adventure == null){
-            throw new IllegalStateException("Tried to access Adventure when the plugin was disabled"); //Tell the plugin Adventure is already used
+            throw new IllegalStateException("Tried to access Adventure when the plugin was disabled"); //Self-explanatory
         }
         return this.adventure;
     }

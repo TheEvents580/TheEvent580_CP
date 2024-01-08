@@ -54,43 +54,112 @@ public class checkGUIClick implements Listener {
             }
         }
 
-        if (event.getView().getTitle().equals("Choose you pronouns :")) {
+        if (event.getView().getTitle().equals("Set your pronouns")) {
             event.setCancelled(true);
-            if (event.getCurrentItem().getType() == Material.RED_CONCRETE) {
-                config.set("pronouns_1." + playerUUID, "[He");
-                player.sendMessage("Your 1st pronoun has been set to \"He\"");
+            String pronoun1 = config.getString("pronoun_1." + playerUUID);
+            String pronoun2 = config.getString("pronoun_2." + playerUUID);
+            if (event.getCurrentItem().getType() == Material.RED_CONCRETE){
+                if (event.getClick().isLeftClick()){
+                    pronoun1 = "He";
+                }
+                if (event.getClick().isRightClick()){
+                    pronoun2 = "He";
+                }
             }
-            if (event.getCurrentItem().getType() == Material.ORANGE_CONCRETE) {
-                config.set("pronouns_1." + playerUUID, "[She");
-                player.sendMessage("Your 1st pronoun has been set to \"She\"");
+            if (event.getCurrentItem().getType() == Material.ORANGE_CONCRETE){
+                if (event.getClick().isLeftClick()){
+                    pronoun1 = "She";
+                }
+                if (event.getClick().isRightClick()){
+                    pronoun2 = "She";
+                }
             }
-            if (event.getCurrentItem().getType() == Material.YELLOW_CONCRETE) {
-                config.set("pronouns_1." + playerUUID, "[They");
-                player.sendMessage("Your 1st pronoun has been set to \"They\"");
+            if (event.getCurrentItem().getType() == Material.YELLOW_CONCRETE){
+                if (event.getClick().isLeftClick()){
+                    pronoun1 = "They";
+                }
+                if (event.getClick().isRightClick()){
+                    pronoun2 = "They";
+                }
             }
-            if (event.getCurrentItem().getType() == Material.LIME_CONCRETE) {
-                config.set("pronouns_1." + playerUUID, "[Any");
-                player.sendMessage("Your 1st pronoun has been set to \"Any\"");
+            if (event.getCurrentItem().getType() == Material.LIME_CONCRETE){
+                if (event.getClick().isLeftClick()){
+                    pronoun1 = "Any";
+                }
+                if (event.getClick().isRightClick()){
+                    pronoun2 = "Any";
+                }
             }
-            if (event.getCurrentItem().getType() == Material.GREEN_CONCRETE) {
-                config.set("pronouns_2." + playerUUID, "Him]");
-                player.sendMessage("Your 2nd pronoun has been set to \"Him\"");
+            if (event.getCurrentItem().getType() == Material.GREEN_CONCRETE){
+                if (event.getClick().isLeftClick()){
+                    pronoun1 = "All";
+                }
+                if (event.getClick().isRightClick()){
+                    pronoun2 = "All";
+                }
             }
-            if (event.getCurrentItem().getType() == Material.CYAN_CONCRETE) {
-                config.set("pronouns_2." + playerUUID, "Her]");
-                player.sendMessage("Your 2nd pronoun has been set to \"Her\"");
+            if (event.getCurrentItem().getType() == Material.CYAN_CONCRETE){
+                if (event.getClick().isLeftClick()){
+                    pronoun1 = "Ask";
+                }
+                if (event.getClick().isRightClick()){
+                    pronoun2 = "Ask";
+                }
             }
-            if (event.getCurrentItem().getType() == Material.LIGHT_BLUE_CONCRETE) {
-                config.set("pronouns_2." + playerUUID, "Them]");
-                player.sendMessage("Your 2nd pronoun has been set to \"Them\"");
+            if (event.getCurrentItem().getType() == Material.LIGHT_BLUE_CONCRETE){
+                if (event.getClick().isLeftClick()){
+                    pronoun1 = "Him";
+                }
+                if (event.getClick().isRightClick()){
+                    pronoun2 = "Him";
+                }
             }
-            if (event.getCurrentItem().getType() == Material.BLUE_CONCRETE) {
-                config.set("pronouns_2." + playerUUID, "All]");
-                player.sendMessage("Your 2nd pronoun has been set to \"All\"");
+            if (event.getCurrentItem().getType() == Material.BLUE_CONCRETE){
+                if (event.getClick().isLeftClick()){
+                    pronoun1 = "Her";
+                }
+                if (event.getClick().isRightClick()){
+                    pronoun2 = "Her";
+                }
             }
-
-            if (event.getCurrentItem().getType() == Material.BARRIER) {
+            if (event.getCurrentItem().getType() == Material.PURPLE_CONCRETE){
+                if (event.getClick().isLeftClick()){
+                    pronoun1 = "Them";
+                }
+                if (event.getClick().isRightClick()){
+                    pronoun2 = "Them";
+                }
+            }
+            if (event.getCurrentItem().getType() == Material.MAGENTA_CONCRETE){
+                if (event.getClick().isLeftClick()){
+                    pronoun1 = "All";
+                }
+                if (event.getClick().isRightClick()){
+                    pronoun2 = "All";
+                }
+            }
+            if (event.getCurrentItem().getType() == Material.PINK_CONCRETE){
+                if (event.getClick().isLeftClick()){
+                    pronoun1 = "Its";
+                }
+                if (event.getClick().isRightClick()){
+                    pronoun2 = "Its";
+                }
+            }
+            if (event.getCurrentItem().getType() == Material.BROWN_CONCRETE){
+                if (event.getClick().isLeftClick()){
+                    pronoun1 = "Me";
+                }
+                if (event.getClick().isRightClick()){
+                    pronoun2 = "Me";
+                }
+            }
+            if (event.getCurrentItem().getType() == Material.BARRIER){
                 player.closeInventory();
+                player.sendMessage("You 1st pronoun is now set to : " + pronoun1);
+                player.sendMessage("Your second pronoun is now set to : " + pronoun2);
+                config.set("pronoun_1." + playerUUID, '[' + pronoun1);
+                config.set("pronoun_2." + playerUUID, pronoun2 + ']');
             }
         }
     }

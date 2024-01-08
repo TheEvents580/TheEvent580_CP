@@ -52,3 +52,5 @@ commands:
   damage:
     description: Toggles damage
     permission: op
+  minecraftle:
+    description: Starts a Minecraftle game

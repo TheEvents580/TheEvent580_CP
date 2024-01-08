@@ -31,6 +31,27 @@ public class minecraftle implements CommandExecutor {
             Inventory inv = Bukkit.createInventory(player, InventoryType.CRAFTING, "Minecraftle in Minecarft");
             player.openWorkbench(null, true);
 
+            /* Add the following items in the inventory :
+            - Oak Planks
+            - Cobblestone
+            - Stone
+            - Glass
+            - White Wool
+            - Stick
+            - Coal
+            - Diamond
+            - Gold Ingot
+            - Iron Ingot
+            - Redstone Dust
+            - Quartz
+            - Oak Slab
+            - Oak Log
+            - Iron Nugget
+            - Redstone Torch
+            - String
+            - Leather
+             */
+
             Material[] possibleItems = {Material.STICK, Material.TORCH, Material.CRAFTING_TABLE, Material.FURNACE,
                     Material.CHEST, Material.LADDER, Material.OAK_FENCE, Material.OAK_BOAT, Material.OAK_SLAB,
                     Material.COBBLESTONE_SLAB, Material.STONE_SLAB, Material.OAK_SIGN, Material.OAK_DOOR,
@@ -67,6 +88,7 @@ public class minecraftle implements CommandExecutor {
             Material randomItem = possibleItems[randomNumber.nextInt(possibleItems.length)];
 
             config.set("minecraftle_game." + player.getUniqueId(), randomItem);
+
         }
 
         plugin.saveConfig();

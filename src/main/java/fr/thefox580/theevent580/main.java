@@ -48,7 +48,8 @@ public class main extends JavaPlugin{
         getCommand("timer").setExecutor(new setTimer(this)); //Add the /settimer command to the plugin
         getCommand("start").setExecutor(new startEvent()); //Add the /start command to the plugin
         getCommand("pronouns").setExecutor(new pronouns()); //Add the /pronouns command to the plugin
-        getCommand("damage").setExecutor(new pronouns()); //Add the /damage command to the plugin
+        getCommand("damage").setExecutor(new damage(this)); //Add the /damage command to the plugin
+        getCommand("minecraftle").setExecutor(new minecraftle(this)); //Add the /minecraftle command to the plugin
 
         getServer().getPluginManager().registerEvents(new onJoinEvent(this), this); //Registers the join message on player join to the plugin
         getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this); //Registers the leave message on player leave to the plugin

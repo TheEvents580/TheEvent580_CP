@@ -54,6 +54,9 @@ commands:
     permission: op
   minecraftle:
     description: Starts a Minecraftle game
-  zone:
-     description: Creates a zone with particles
-     permission: op
+  setconfigvarplayer:
+    description: Allows outside plugins / players to interact with the config file (Special --> This command allows to modify a player var)
+    permission: op
+  setconfigvar:
+    description: Allows outside plugins / players to interact with the config file
+    permission: op

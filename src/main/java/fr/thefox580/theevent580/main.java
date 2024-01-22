@@ -1,11 +1,8 @@
 package fr.thefox580.theevent580;
 
-import com.noxcrew.noxesium.api.protocol.rule.ServerRuleIndices;
 import fr.thefox580.theevent580.commands.*;
 import fr.thefox580.theevent580.listeners.*;
 import fr.thefox580.theevent580.tasks.*;
-import me.superneon4ik.noxesiumutils.NoxesiumUtils;
-import me.superneon4ik.noxesiumutils.feature.rule.impl.BooleanServerRule;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -50,7 +47,8 @@ public class main extends JavaPlugin{
         getCommand("pronouns").setExecutor(new pronouns()); //Add the /pronouns command to the plugin
         getCommand("damage").setExecutor(new damage(this)); //Add the /damage command to the plugin
         getCommand("minecraftle").setExecutor(new minecraftle(this)); //Add the /minecraftle command to the plugin
-        getCommand("zone").setExecutor(new zone()); //Add the /zone command to the plugin
+        getCommand("setconfigvarplayer").setExecutor(new setConfigVarPlayer(this)); //Add the /setconfigvarplayer command to the plugin
+        getCommand("setconfigvar").setExecutor(new setConfigVar(this)); //Add the /setconfigvar command to the plugin
 
         getServer().getPluginManager().registerEvents(new onJoinEvent(this), this); //Registers the join message on player join to the plugin
         getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this); //Registers the leave message on player leave to the plugin

@@ -54,3 +54,6 @@ commands:
     permission: op
   minecraftle:
     description: Starts a Minecraftle game
+  zone:
+     description: Creates a zone with particles
+     permission: op

@@ -15,16 +15,16 @@ import org.jetbrains.annotations.NotNull;
 
 public class minecraftle implements CommandExecutor {
 
-    private static main plugin;
+    private final main plugin;
 
     public minecraftle(main plugin) {
         this.plugin = plugin;
     }
 
-    FileConfiguration config = plugin.getConfig();
-
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
+
+        FileConfiguration config = plugin.getConfig();
 
         if (commandSender instanceof Player player){
 

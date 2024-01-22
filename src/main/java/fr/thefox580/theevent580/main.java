@@ -49,6 +49,7 @@ public class main extends JavaPlugin{
         getCommand("minecraftle").setExecutor(new minecraftle(this)); //Add the /minecraftle command to the plugin
         getCommand("setconfigvarplayer").setExecutor(new setConfigVarPlayer(this)); //Add the /setconfigvarplayer command to the plugin
         getCommand("setconfigvar").setExecutor(new setConfigVar(this)); //Add the /setconfigvar command to the plugin
+        getCommand("zone").setExecutor(new zone()); //Add the /zone command to the plugin
 
         getServer().getPluginManager().registerEvents(new onJoinEvent(this), this); //Registers the join message on player join to the plugin
         getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this); //Registers the leave message on player leave to the plugin

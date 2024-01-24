@@ -60,3 +60,6 @@ commands:
   setconfigvar:
     description: Allows outside plugins / players to interact with the config file
     permission: op
+  setsgheight:
+    description: Sets the height border for the Survival Games game
+    permission: op

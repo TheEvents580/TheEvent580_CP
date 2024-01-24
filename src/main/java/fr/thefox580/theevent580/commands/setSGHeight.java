@@ -1,7 +1,6 @@
 package fr.thefox580.theevent580.commands;
 
 import fr.thefox580.theevent580.main;
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -33,7 +32,7 @@ public class setSGHeight implements CommandExecutor {
                 player.sendMessage("Set the Survival Games height to " + strings[0]);
             }
 
-            config.set("sg.height_old", config.getDouble("sg.height"));
+            config.set("sg.height_old", sgHeight);
             config.set("sg.height", Double.valueOf(strings[0]));
             plugin.saveConfig();
         }

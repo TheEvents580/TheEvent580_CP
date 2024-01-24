@@ -11,11 +11,9 @@ import org.jetbrains.annotations.NotNull;
 public class addAndRemoveGameMultiplier implements CommandExecutor {
 
     private final main plugin;
-    private final main advMain;
 
     public addAndRemoveGameMultiplier(main plugin) {
         this.plugin = plugin;
-        this.advMain = plugin;
     }
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
@@ -31,7 +29,7 @@ public class addAndRemoveGameMultiplier implements CommandExecutor {
             if (player != null){
                 if (player.isOnline()){
 
-                    double gameMultiplierPlayer = this.plugin.getConfig().getLong("multiplier_game."+player.getUniqueId());
+                    double gameMultiplierPlayer = this.plugin.getConfig().getDouble("multiplier_game."+player.getUniqueId());
 
                     gameMultiplierPlayer += Double.parseDouble(strings[1]);
 
@@ -39,9 +37,9 @@ public class addAndRemoveGameMultiplier implements CommandExecutor {
 
                     if (gameMultiplierPlayer < 0){
                         strGameMultiplier = strGameMultiplier.substring(1);
-                        commandSender.sendMessage("Removed "+ strGameMultiplier + " game points from player " + player.getName());
+                        commandSender.sendMessage("Removed "+ strGameMultiplier + " game multiplier from player " + player.getName());
                     } else {
-                        commandSender.sendMessage("Added " + strGameMultiplier + " game points to player " + player.getName());
+                        commandSender.sendMessage("Added " + strGameMultiplier + " game multiplier to player " + player.getName());
                     }
 
                     this.plugin.getConfig().set("multiplier_game."+player.getUniqueId(), gameMultiplierPlayer);

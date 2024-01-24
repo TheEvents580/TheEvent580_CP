@@ -11,11 +11,9 @@ import org.jetbrains.annotations.NotNull;
 public class addAndRemovePoints implements CommandExecutor {
 
     private final main plugin;
-    private final main advMain;
 
     public addAndRemovePoints(main plugin) {
         this.plugin = plugin;
-        this.advMain = plugin;
     }
 
     @Override
@@ -42,9 +40,10 @@ public class addAndRemovePoints implements CommandExecutor {
                         strPoints = strPoints.substring(1);
                         commandSender.sendMessage("Removed "+ strPoints + " points from player " + player.getName());
                     } else {
-                        commandSender.sendMessage("Added " + pointsPlayer + " points to player " + player.getName());
+                        commandSender.sendMessage("Added " + strPoints + " points to player " + player.getName());
                     }
 
+                    this.plugin.getConfig().set("old_points."+player.getUniqueId(), this.plugin.getConfig().get("points."+player.getUniqueId()));
                     this.plugin.getConfig().set("points."+player.getUniqueId(), pointsPlayer);
                     this.plugin.saveConfig();
 

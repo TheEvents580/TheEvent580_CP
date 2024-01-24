@@ -11,11 +11,9 @@ import org.jetbrains.annotations.NotNull;
 public class addAndRemoveTotalPoints implements CommandExecutor {
 
     private final main plugin;
-    private final main advMain;
 
     public addAndRemoveTotalPoints(main plugin) {
         this.plugin = plugin;
-        this.advMain = plugin;
     }
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
@@ -41,9 +39,10 @@ public class addAndRemoveTotalPoints implements CommandExecutor {
                         strTotalPoints = strTotalPoints.substring(1);
                         commandSender.sendMessage("Removed "+ strTotalPoints + " total points from player " + player.getName());
                     } else {
-                        commandSender.sendMessage("Added " + totalPointsPlayer + " total points to player " + player.getName());
+                        commandSender.sendMessage("Added " + strTotalPoints + " total points to player " + player.getName());
                     }
 
+                    this.plugin.getConfig().set("old_total_points."+player.getUniqueId(), this.plugin.getConfig().get("total_points."+player.getUniqueId()));
                     this.plugin.getConfig().set("total_points."+player.getUniqueId(), totalPointsPlayer);
                     this.plugin.saveConfig();
 

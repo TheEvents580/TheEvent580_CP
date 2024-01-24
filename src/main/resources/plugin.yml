@@ -60,6 +60,3 @@ commands:
   setconfigvar:
     description: Allows outside plugins / players to interact with the config file
     permission: op
-  zone:
-    description: Creates a zone
-    permission: op

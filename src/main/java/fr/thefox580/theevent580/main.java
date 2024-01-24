@@ -5,8 +5,13 @@ import fr.thefox580.theevent580.listeners.*;
 import fr.thefox580.theevent580.tasks.*;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
+import org.bukkit.scoreboard.Criteria;
+import org.bukkit.scoreboard.Objective;
+import org.bukkit.scoreboard.Scoreboard;
+import org.bukkit.scoreboard.ScoreboardManager;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 public class main extends JavaPlugin{
@@ -49,7 +54,7 @@ public class main extends JavaPlugin{
         getCommand("minecraftle").setExecutor(new minecraftle(this)); //Add the /minecraftle command to the plugin
         getCommand("setconfigvarplayer").setExecutor(new setConfigVarPlayer(this)); //Add the /setconfigvarplayer command to the plugin
         getCommand("setconfigvar").setExecutor(new setConfigVar(this)); //Add the /setconfigvar command to the plugin
-        getCommand("zone").setExecutor(new zone()); //Add the /zone command to the plugin
+        //getCommand("zone").setExecutor(new zone()); //Add the /zone command to the plugin
 
         getServer().getPluginManager().registerEvents(new onJoinEvent(this), this); //Registers the join message on player join to the plugin
         getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this); //Registers the leave message on player leave to the plugin

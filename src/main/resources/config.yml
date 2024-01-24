@@ -8,10 +8,16 @@ alive_players_sg : 0
 damage_enabled : true
 
 game_counter : 1
+old_last_game : "None"
+old_last_game_color : "&f"
 last_game : "None"
-last_game_color : "&r"
+last_game_color : "&f"
 game_world : "Hub"
 game_color : "&f"
+
+scoreboard.pos : false
+sg.height : 300
+sg.height_old : 300
 
 spectator_list_uuid:
   - "dc833b85-3cba-4ebd-8f4d-febc09f02422"
@@ -66,6 +72,77 @@ multiplier_game.b9e8cdfb-a532-4398-956d-a49fb6bfa9f1: 1.0
 multiplier_game.aba34626-90e3-498f-b70c-8314e0bb4277: 1.0
 multiplier_game.e701d8fc-b26f-4362-8c88-07300a3f1a36: 1.0
 
+old_multiplier_game.dc833b85-3cba-4ebd-8f4d-febc09f02422: 1.0
+old_multiplier_game.252fda4d-bb94-4449-876d-fec8d172dda0: 1.0
+old_multiplier_game.a5b68cfe-e546-4b63-a87d-26f065710dc1: 1.0
+old_multiplier_game.a0f5d8c3-3248-42f5-a2ef-b216e5d6d898: 1.0
+old_multiplier_game.4b5526fd-97ae-4303-aeb1-ef9d642b94b6: 1.0
+old_multiplier_game.c6ef5a1b-be62-40d2-a156-beffe050c36e: 1.0
+old_multiplier_game.128c5102-ce00-4945-8653-c41f4ddefbe7: 1.0
+old_multiplier_game.cadb7cce-fdae-44ee-9426-ec08cdb6798c: 1.0
+old_multiplier_game.0eab4b9d-596e-4d28-ac75-b934d53f3f2b: 1.0
+old_multiplier_game.1ba03542-0da6-4981-bc25-1c303dd2f940: 1.0
+old_multiplier_game.cfffe406-66be-4eb9-b72e-dca11de4836b: 1.0
+old_multiplier_game.95451223-350a-47e5-929f-67ca4a412cc6: 1.0
+old_multiplier_game.c65a31f2-f0a1-4bc9-9f09-16cb533c78da: 1.0
+old_multiplier_game.19fcc862-7e4b-4d42-a258-98a6723ea948: 1.0
+old_multiplier_game.fedb60d7-ecb9-4c74-8630-c95aa1692b7d: 1.0
+old_multiplier_game.750f5ea8-e31b-4581-8db6-d213a755651b: 1.0
+old_multiplier_game.81ff6334-7c28-4159-8b92-8395d00308f1: 1.0
+old_multiplier_game.3d09fa7f-be05-4f23-ae1b-a32d2567fd6d: 1.0
+old_multiplier_game.24e94701-c27e-45f4-a58a-2a82108f5f0b: 1.0
+old_multiplier_game.b9e8cdfb-a532-4398-956d-a49fb6bfa9f1: 1.0
+old_multiplier_game.aba34626-90e3-498f-b70c-8314e0bb4277: 1.0
+old_multiplier_game.e701d8fc-b26f-4362-8c88-07300a3f1a36: 1.0
+
+pos.dc833b85-3cba-4ebd-8f4d-febc09f02422: "0th"
+pos.252fda4d-bb94-4449-876d-fec8d172dda0: "0th"
+pos.a5b68cfe-e546-4b63-a87d-26f065710dc1: "0th"
+pos.a0f5d8c3-3248-42f5-a2ef-b216e5d6d898: "0th"
+pos.4b5526fd-97ae-4303-aeb1-ef9d642b94b6: "0th"
+pos.c6ef5a1b-be62-40d2-a156-beffe050c36e: "0th"
+pos.128c5102-ce00-4945-8653-c41f4ddefbe7: "0th"
+pos.82d1eccf-d5a7-4636-8374-891f0d67fcc3: "0th"
+pos.cadb7cce-fdae-44ee-9426-ec08cdb6798c: "0th"
+pos.0eab4b9d-596e-4d28-ac75-b934d53f3f2b: "0th"
+pos.1ba03542-0da6-4981-bc25-1c303dd2f940: "0th"
+pos.cfffe406-66be-4eb9-b72e-dca11de4836b: "0th"
+pos.95451223-350a-47e5-929f-67ca4a412cc6: "0th"
+pos.c65a31f2-f0a1-4bc9-9f09-16cb533c78da: "0th"
+pos.19fcc862-7e4b-4d42-a258-98a6723ea948: "0th"
+pos.fedb60d7-ecb9-4c74-8630-c95aa1692b7d: "0th"
+pos.750f5ea8-e31b-4581-8db6-d213a755651b: "0th"
+pos.81ff6334-7c28-4159-8b92-8395d00308f1: "0th"
+pos.3d09fa7f-be05-4f23-ae1b-a32d2567fd6d: "0th"
+pos.24e94701-c27e-45f4-a58a-2a82108f5f0b: "0th"
+pos.b9e8cdfb-a532-4398-956d-a49fb6bfa9f1: "0th"
+pos.aba34626-90e3-498f-b70c-8314e0bb4277: "0th"
+pos.e701d8fc-b26f-4362-8c88-07300a3f1a36: "0th"
+
+old_points.dc833b85-3cba-4ebd-8f4d-febc09f02422: 0
+old_points.252fda4d-bb94-4449-876d-fec8d172dda0: 0
+old_points.a5b68cfe-e546-4b63-a87d-26f065710dc1: 0
+old_points.a0f5d8c3-3248-42f5-a2ef-b216e5d6d898: 0
+old_points.4b5526fd-97ae-4303-aeb1-ef9d642b94b6: 0
+old_points.c6ef5a1b-be62-40d2-a156-beffe050c36e: 0
+old_points.128c5102-ce00-4945-8653-c41f4ddefbe7: 0
+old_points.82d1eccf-d5a7-4636-8374-891f0d67fcc3: 0
+old_points.cadb7cce-fdae-44ee-9426-ec08cdb6798c: 0
+old_points.0eab4b9d-596e-4d28-ac75-b934d53f3f2b: 0
+old_points.1ba03542-0da6-4981-bc25-1c303dd2f940: 0
+old_points.cfffe406-66be-4eb9-b72e-dca11de4836b: 0
+old_points.95451223-350a-47e5-929f-67ca4a412cc6: 0
+old_points.c65a31f2-f0a1-4bc9-9f09-16cb533c78da: 0
+old_points.19fcc862-7e4b-4d42-a258-98a6723ea948: 0
+old_points.fedb60d7-ecb9-4c74-8630-c95aa1692b7d: 0
+old_points.750f5ea8-e31b-4581-8db6-d213a755651b: 0
+old_points.81ff6334-7c28-4159-8b92-8395d00308f1: 0
+old_points.3d09fa7f-be05-4f23-ae1b-a32d2567fd6d: 0
+old_points.24e94701-c27e-45f4-a58a-2a82108f5f0b: 0
+old_points.b9e8cdfb-a532-4398-956d-a49fb6bfa9f1: 0
+old_points.aba34626-90e3-498f-b70c-8314e0bb4277: 0
+old_points.e701d8fc-b26f-4362-8c88-07300a3f1a36: 0
+
 points.dc833b85-3cba-4ebd-8f4d-febc09f02422: 0
 points.252fda4d-bb94-4449-876d-fec8d172dda0: 0
 points.a5b68cfe-e546-4b63-a87d-26f065710dc1: 0
@@ -90,6 +167,30 @@ points.b9e8cdfb-a532-4398-956d-a49fb6bfa9f1: 0
 points.aba34626-90e3-498f-b70c-8314e0bb4277: 0
 points.e701d8fc-b26f-4362-8c88-07300a3f1a36: 0
 
+old_game_points.dc833b85-3cba-4ebd-8f4d-febc09f02422: 0
+old_game_points.252fda4d-bb94-4449-876d-fec8d172dda0: 0
+old_game_points.a5b68cfe-e546-4b63-a87d-26f065710dc1: 0
+old_game_points.a0f5d8c3-3248-42f5-a2ef-b216e5d6d898: 0
+old_game_points.4b5526fd-97ae-4303-aeb1-ef9d642b94b6: 0
+old_game_points.c6ef5a1b-be62-40d2-a156-beffe050c36e: 0
+old_game_points.128c5102-ce00-4945-8653-c41f4ddefbe7: 0
+old_game_points.82d1eccf-d5a7-4636-8374-891f0d67fcc3: 0
+old_game_points.cadb7cce-fdae-44ee-9426-ec08cdb6798c: 0
+old_game_points.0eab4b9d-596e-4d28-ac75-b934d53f3f2b: 0
+old_game_points.1ba03542-0da6-4981-bc25-1c303dd2f940: 0
+old_game_points.cfffe406-66be-4eb9-b72e-dca11de4836b: 0
+old_game_points.95451223-350a-47e5-929f-67ca4a412cc6: 0
+old_game_points.c65a31f2-f0a1-4bc9-9f09-16cb533c78da: 0
+old_game_points.19fcc862-7e4b-4d42-a258-98a6723ea948: 0
+old_game_points.fedb60d7-ecb9-4c74-8630-c95aa1692b7d: 0
+old_game_points.750f5ea8-e31b-4581-8db6-d213a755651b: 0
+old_game_points.81ff6334-7c28-4159-8b92-8395d00308f1: 0
+old_game_points.3d09fa7f-be05-4f23-ae1b-a32d2567fd6d: 0
+old_game_points.24e94701-c27e-45f4-a58a-2a82108f5f0b: 0
+old_game_points.b9e8cdfb-a532-4398-956d-a49fb6bfa9f1: 0
+old_game_points.aba34626-90e3-498f-b70c-8314e0bb4277: 0
+old_game_points.e701d8fc-b26f-4362-8c88-07300a3f1a36: 0
+
 game_points.dc833b85-3cba-4ebd-8f4d-febc09f02422: 0
 game_points.252fda4d-bb94-4449-876d-fec8d172dda0: 0
 game_points.a5b68cfe-e546-4b63-a87d-26f065710dc1: 0
@@ -113,6 +214,30 @@ game_points.24e94701-c27e-45f4-a58a-2a82108f5f0b: 0
 game_points.b9e8cdfb-a532-4398-956d-a49fb6bfa9f1: 0
 game_points.aba34626-90e3-498f-b70c-8314e0bb4277: 0
 game_points.e701d8fc-b26f-4362-8c88-07300a3f1a36: 0
+
+old_total_points.dc833b85-3cba-4ebd-8f4d-febc09f02422: 0
+old_total_points.252fda4d-bb94-4449-876d-fec8d172dda0: 0
+old_total_points.a5b68cfe-e546-4b63-a87d-26f065710dc1: 0
+old_total_points.a0f5d8c3-3248-42f5-a2ef-b216e5d6d898: 0
+old_total_points.4b5526fd-97ae-4303-aeb1-ef9d642b94b6: 0
+old_total_points.c6ef5a1b-be62-40d2-a156-beffe050c36e: 0
+old_total_points.128c5102-ce00-4945-8653-c41f4ddefbe7: 0
+old_total_points.82d1eccf-d5a7-4636-8374-891f0d67fcc3: 0
+old_total_points.cadb7cce-fdae-44ee-9426-ec08cdb6798c: 0
+old_total_points.0eab4b9d-596e-4d28-ac75-b934d53f3f2b: 0
+old_total_points.1ba03542-0da6-4981-bc25-1c303dd2f940: 0
+old_total_points.cfffe406-66be-4eb9-b72e-dca11de4836b: 0
+old_total_points.95451223-350a-47e5-929f-67ca4a412cc6: 0
+old_total_points.c65a31f2-f0a1-4bc9-9f09-16cb533c78da: 0
+old_total_points.19fcc862-7e4b-4d42-a258-98a6723ea948: 0
+old_total_points.fedb60d7-ecb9-4c74-8630-c95aa1692b7d: 0
+old_total_points.750f5ea8-e31b-4581-8db6-d213a755651b: 0
+old_total_points.81ff6334-7c28-4159-8b92-8395d00308f1: 0
+old_total_points.3d09fa7f-be05-4f23-ae1b-a32d2567fd6d: 0
+old_total_points.24e94701-c27e-45f4-a58a-2a82108f5f0b: 0
+old_total_points.b9e8cdfb-a532-4398-956d-a49fb6bfa9f1: 0
+old_total_points.aba34626-90e3-498f-b70c-8314e0bb4277: 0
+old_total_points.e701d8fc-b26f-4362-8c88-07300a3f1a36: 0
 
 total_points.dc833b85-3cba-4ebd-8f4d-febc09f02422: 0
 total_points.252fda4d-bb94-4449-876d-fec8d172dda0: 0

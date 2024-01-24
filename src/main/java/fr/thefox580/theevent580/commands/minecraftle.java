@@ -21,10 +21,11 @@ public class minecraftle implements CommandExecutor {
         this.plugin = plugin;
     }
 
+
     @Override
     public boolean onCommand(@NotNull CommandSender commandSender, @NotNull Command command, @NotNull String s, @NotNull String[] strings) {
 
-        FileConfiguration config = plugin.getConfig();
+        FileConfiguration config = this.plugin.getConfig();
 
         if (commandSender instanceof Player player){
 

@@ -1,9 +1,6 @@
 package fr.thefox580.theevent580.listeners;
-import com.noxcrew.noxesium.api.protocol.rule.ServerRuleIndices;
 import fr.thefox580.theevent580.main;
 
-import me.superneon4ik.noxesiumutils.NoxesiumUtils;
-import me.superneon4ik.noxesiumutils.network.clientbound.ClientboundChangeServerRulesPacket;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.Bukkit;
@@ -15,7 +12,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.List;
 
 public class onJoinEvent implements Listener {
     // Next 4 lines of code : Setting up Adventure
@@ -31,6 +27,8 @@ public class onJoinEvent implements Listener {
 
         event.setJoinMessage(""); //Clear join message
         Player player = event.getPlayer(); //Get the player
+
+        advMain.rlSB().setSB(player);
 
         TextColor color = TextColor.color(255, 255, 255); //Set color of text to white (base for if the player doesn't have a team)
         Component component = Component.translatable("%nox_uuid%"+player.getUniqueId()+",false,0,-1,1","\uD83D\uDC64"); //Setup custom player head

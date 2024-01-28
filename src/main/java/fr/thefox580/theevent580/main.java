@@ -5,13 +5,8 @@ import fr.thefox580.theevent580.listeners.*;
 import fr.thefox580.theevent580.tasks.*;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
-import org.bukkit.scoreboard.Criteria;
-import org.bukkit.scoreboard.Objective;
-import org.bukkit.scoreboard.Scoreboard;
-import org.bukkit.scoreboard.ScoreboardManager;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 public class main extends JavaPlugin{
@@ -69,6 +64,12 @@ public class main extends JavaPlugin{
         BukkitTask reloadScoreboadTask = new reloadScoreboard(this).runTaskTimer(this, 0L, 1L);
         BukkitTask reloadTimerTask = new reloadTimer(this).runTaskTimer(this, 0L, 20L);
 
+        rlSB();
+
+    }
+
+    public reloadScoreboard rlSB(){
+        return new reloadScoreboard(this);
     }
 
     @Override

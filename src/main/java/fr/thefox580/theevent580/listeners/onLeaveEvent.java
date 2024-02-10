@@ -27,6 +27,7 @@ public class onLeaveEvent implements Listener {
         TextColor color = TextColor.color(255, 255, 255); //Set color of text to white (base for if the player doesn't have a team)
         Component component = Component.translatable("%nox_uuid%"+player.getUniqueId()+",true,0,-1,1","\uD83D\uDC64"); //Setup custom player head
 
+        advMain.getConfig().set("online_players", advMain.getConfig().getInt("online_players") - 1);
 
         if (player.hasPermission("group.spectators")){ //If the player is a spectator
             color = TextColor.color(85, 85, 85); //Set the color to dark gray

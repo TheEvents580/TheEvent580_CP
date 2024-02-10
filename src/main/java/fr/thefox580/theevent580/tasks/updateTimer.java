@@ -19,7 +19,7 @@ public class updateTimer extends BukkitRunnable {
 
         int second = config.getInt("timer_seconds");
         int minutes = config.getInt("timer_minutes");
-        String timer = config.getString("timer_mode");
+        //String timer = config.getString("timer");
 
         if (second == 0){
             if (minutes > 0){
@@ -27,7 +27,7 @@ public class updateTimer extends BukkitRunnable {
                 config.set("timer_seconds", 61);
             }
             else {
-                config.set("timer_mode", "Game End");
+                config.set("timer", "Game End");
             }
 
         }

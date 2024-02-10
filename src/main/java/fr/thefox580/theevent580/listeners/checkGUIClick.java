@@ -29,7 +29,6 @@ public class checkGUIClick implements Listener {
         FileConfiguration config = plugin.getConfig();
 
         Player player = (Player) event.getWhoClicked();
-
         UUID playerUUID = player.getUniqueId();
 
         if (event.getView().getTitle().equals("Are you sure to start ?")) {
@@ -39,7 +38,8 @@ public class checkGUIClick implements Listener {
                 if (event.getCurrentItem().getType() == Material.LIME_CONCRETE) {
                     player.performCommand("timer mode 1");
                     player.performCommand("timer set 1 30");
-                    player.performCommand("timer toggle");
+                    config.set("timer_mode", !config.getBoolean("timer_mode"));
+                    player.performCommand("startskript");
 
                     plugin.adventure().players().sendMessage(Component.text("[")
                             .append(Component.text("TheEvent580", TextColor.color(255, 85, 85), TextDecoration.BOLD))

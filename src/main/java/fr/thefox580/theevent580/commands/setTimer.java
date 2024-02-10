@@ -25,7 +25,7 @@ public class setTimer implements CommandExecutor {
                 config.set("timer_minutes", Integer.valueOf(strings[1]));
                 config.set("timer_seconds", Integer.valueOf(strings[2]));
             }
-            case "toggle" -> config.set("timer_mode", !(config.getBoolean("timer_mode")));
+            case "toggle" -> config.set("timer_mode", !config.getBoolean("timer_mode"));
             case "mode" -> config.set("timer", strings[1]);
         }
 

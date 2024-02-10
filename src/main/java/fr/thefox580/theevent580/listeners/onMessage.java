@@ -13,7 +13,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class onMessage implements Listener {
-    // Next 4 lines of code : Setting up Adventure
+    // Next 4 lines of code > Setting up Adventure
 
     private final main advMain;
 
@@ -78,7 +78,7 @@ public class onMessage implements Listener {
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
-                    .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
+                    .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('☠')); //Set custom message
             advMain.adventure().players().sendMessage(message); //Send custom message
 
@@ -91,7 +91,7 @@ public class onMessage implements Listener {
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
-                    .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
+                    .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(170, 0, 0))); //Set custom message
             advMain.adventure().players().sendMessage(message); //Send custom message
 
@@ -104,7 +104,7 @@ public class onMessage implements Listener {
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
-                    .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
+                    .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(255, 85, 85))); //Set custom message
             advMain.adventure().players().sendMessage(message); //Send custom message
 
@@ -117,7 +117,7 @@ public class onMessage implements Listener {
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
-                    .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
+                    .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(255, 170, 0))); //Set custom message
             advMain.adventure().players().sendMessage(message); //Send custom message
 
@@ -130,7 +130,7 @@ public class onMessage implements Listener {
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
-                    .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
+                    .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(255, 255, 85))); //Set custom message
             advMain.adventure().players().sendMessage(message); //Send custom message
 
@@ -143,7 +143,7 @@ public class onMessage implements Listener {
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
-                    .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
+                    .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(85, 255, 85))); //Set custom message
             advMain.adventure().players().sendMessage(message); //Send custom message
 
@@ -156,7 +156,7 @@ public class onMessage implements Listener {
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
-                    .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
+                    .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(0, 170, 0))); //Set custom message
             advMain.adventure().players().sendMessage(message); //Send custom message
 
@@ -169,7 +169,7 @@ public class onMessage implements Listener {
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
-                    .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
+                    .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(0, 170, 170))); //Set custom message
             advMain.adventure().players().sendMessage(message); //Send custom message
 
@@ -182,7 +182,7 @@ public class onMessage implements Listener {
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
-                    .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
+                    .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(85, 255, 255))); //Set custom message
             advMain.adventure().players().sendMessage(message); //Send custom message
 
@@ -195,7 +195,7 @@ public class onMessage implements Listener {
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
-                    .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
+                    .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(85, 85, 255))); //Set custom message
             advMain.adventure().players().sendMessage(message); //Send custom message
 
@@ -208,7 +208,7 @@ public class onMessage implements Listener {
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
-                    .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
+                    .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(0, 0, 170))); //Set custom message
             advMain.adventure().players().sendMessage(message); //Send custom message
 
@@ -221,7 +221,7 @@ public class onMessage implements Listener {
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
-                    .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
+                    .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(170, 0, 170))); //Set custom message
             advMain.adventure().players().sendMessage(message); //Send custom message
 
@@ -234,7 +234,7 @@ public class onMessage implements Listener {
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
-                    .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
+                    .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text('❤', TextColor.color(255, 85, 255))); //Set custom message
             advMain.adventure().players().sendMessage(message); //Send custom message
 
@@ -247,7 +247,7 @@ public class onMessage implements Listener {
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronouns_1." + player.getUniqueId()) + '/' + config.getString("pronouns_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
-                    .append(Component.text(" : ", TextColor.color(255, 255, 255))) //Set custom message
+                    .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
                     .append(Component.text(messageContent)); //Set custom message
             advMain.adventure().players().sendMessage(message); //Send custom message
         }

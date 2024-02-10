@@ -52,6 +52,8 @@ public class main extends JavaPlugin{
         //getCommand("zone").setExecutor(new zone()); //Add the /zone command to the plugin
         getCommand("setsgheight").setExecutor(new setSGHeight(this)); //Add the /setsgheight to the plugin
         getCommand("setgame").setExecutor(new setGame(this)); // Add the /setgame to the plugin
+        getCommand("tps").setExecutor(new TPS()); //Add the /tps to the plugin
+        getCommand("cpu").setExecutor(new CPUUsage()); // Add the /cpu to the plugin
 
         getServer().getPluginManager().registerEvents(new onJoinEvent(this), this); //Registers the join message on player join to the plugin
         getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this); //Registers the leave message on player leave to the plugin

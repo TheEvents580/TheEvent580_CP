@@ -6,7 +6,7 @@
 
     <groupId>fr.thefox580</groupId>
     <artifactId>TheEvent580</artifactId>
-    <version>1.5.1</version>
+    <version>1.5.2</version>
     <packaging>jar</packaging>
 
     <name>TheEvent580</name>
@@ -101,7 +101,13 @@
         <dependency>
             <groupId>me.superneon4ik</groupId>
             <artifactId>NoxesiumUtils</artifactId>
-            <version>1.5.0</version>
+            <version>1.6.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>me.lucko</groupId>
+            <artifactId>spark-api</artifactId>
+            <version>0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

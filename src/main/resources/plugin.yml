@@ -66,3 +66,9 @@ commands:
   setgame:
     description: Sets the next game
     permission: op
+  cpu:
+    description: Shows CPU stats to the executor
+    permission: op
+  tps:
+    description: Shows TPS & MSPT to the executor
+    permission: op

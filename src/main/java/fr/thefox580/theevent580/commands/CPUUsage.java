@@ -19,10 +19,10 @@ public class CPUUsage implements CommandExecutor {
             Spark spark = provider.getProvider();
 
             DoubleStatistic<StatisticWindow.CpuUsage> cpuUsage = spark.cpuSystem();
-            double usagelastMin = cpuUsage.poll(StatisticWindow.CpuUsage.MINUTES_1);
-            double usagelast15Min = cpuUsage.poll(StatisticWindow.CpuUsage.MINUTES_15);
+            double usagelastMin = cpuUsage.poll(StatisticWindow.CpuUsage.MINUTES_1)*100;
+            double usagelast15Min = cpuUsage.poll(StatisticWindow.CpuUsage.MINUTES_15)*100;
 
-            commandSender.sendMessage("Here is the CPU activity from the last minute : " + usagelastMin + ". And from the last 15 minutes : " + usagelast15Min);
+            commandSender.sendMessage("Here is the CPU activity from the last minute : " + usagelastMin + "%. \nAnd from the last 15 minutes : " + usagelast15Min + "%");
 
         }
 

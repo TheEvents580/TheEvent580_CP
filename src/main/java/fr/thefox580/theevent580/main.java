@@ -42,8 +42,8 @@ public class main extends JavaPlugin{
         getCommand("setglobalmultiplier").setExecutor(new setGlobalMultiplier(this)); //Add the /setglobalmultiplier command to the plugin
         getCommand("getglobalmultiplier").setExecutor(new getGlobalMultiplier(this)); //Add the /getglobalmultiplier command to the plugin
         getCommand("gamemultiplier").setExecutor(new addAndRemoveGameMultiplier(this)); //Add the /gamemultiplier command to the plugin
-        getCommand("timer").setExecutor(new setTimer(this)); //Add the /settimer command to the plugin
-        getCommand("start").setExecutor(new startEvent()); //Add the /start command to the plugin
+        //getCommand("timer").setExecutor(new setTimer(this)); //Add the /settimer command to the plugin
+        //getCommand("start").setExecutor(new startEvent()); //Add the /start command to the plugin
         getCommand("pronouns").setExecutor(new pronouns()); //Add the /pronouns command to the plugin
         getCommand("damage").setExecutor(new damage(this)); //Add the /damage command to the plugin
         getCommand("minecraftle").setExecutor(new minecraftle(this)); //Add the /minecraftle command to the plugin
@@ -51,7 +51,7 @@ public class main extends JavaPlugin{
         getCommand("setconfigvar").setExecutor(new setConfigVar(this)); //Add the /setconfigvar command to the plugin
         //getCommand("zone").setExecutor(new zone()); //Add the /zone command to the plugin
         getCommand("setsgheight").setExecutor(new setSGHeight(this)); //Add the /setsgheight to the plugin
-        getCommand("setgame").setExecutor(new setGame(this)); // Add the /setgame to the plugin
+        //getCommand("setgame").setExecutor(new setGame(this)); // Add the /setgame to the plugin
         getCommand("tps").setExecutor(new TPS()); //Add the /tps to the plugin
         getCommand("cpu").setExecutor(new CPUUsage()); // Add the /cpu to the plugin
 
@@ -63,16 +63,18 @@ public class main extends JavaPlugin{
         getServer().getPluginManager().registerEvents(new onNoxesiumJoinEvent(), this); //Registers when a player joins the server to remove trident / boat collisions
         getServer().getPluginManager().registerEvents(new onDamage(this), this); //Registers when damage is dealt
 
-        BukkitTask reloadScoreboadTask = new reloadScoreboard(this).runTaskTimer(this, 0L, 1L);
-        BukkitTask reloadTimerTask = new reloadTimer(this).runTaskTimer(this, 0L, 20L);
+        //BukkitTask reloadScoreboadTask = new reloadScoreboard(this).runTaskTimer(this, 0L, 1L);
+        //BukkitTask reloadTimerTask = new reloadTimer(this).runTaskTimer(this, 0L, 20L);
 
-        rlSB();
+        //rlSB();
 
     }
 
+    /*
     public reloadScoreboard rlSB(){
         return new reloadScoreboard(this);
     }
+    */
 
     @Override
     public void onDisable() {

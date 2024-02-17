@@ -41,12 +41,12 @@ commands:
   gamemultiplier:
     description: Add / removes game multipler to the player
     permission: op
-  timer:
-    description: Set the timer mode / time and if it's active or not
-    permission: op
-  start:
-    description: Starts the event
-    permission: op
+  #timer:
+  #  description: Set the timer mode / time and if it's active or not
+  #  permission: op
+  #start:
+  #  description: Starts the event
+  #  permission: op
   pronouns:
     description: Changes player's pronouns
   damage:
@@ -63,9 +63,9 @@ commands:
   setsgheight:
     description: Sets the height border for the Survival Games game
     permission: op
-  setgame:
-    description: Sets the next game
-    permission: op
+  #setgame:
+  #  description: Sets the next game
+  #  permission: op
   cpu:
     description: Shows CPU stats to the executor
     permission: op

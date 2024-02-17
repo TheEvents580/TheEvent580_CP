@@ -28,7 +28,7 @@ public class onJoinEvent implements Listener {
         event.setJoinMessage(""); //Clear join message
         Player player = event.getPlayer(); //Get the player
 
-        advMain.rlSB().setSB(player);
+        //advMain.rlSB().setSB(player);
 
         TextColor color = TextColor.color(255, 255, 255); //Set color of text to white (base for if the player doesn't have a team)
         Component component = Component.translatable("%nox_uuid%"+player.getUniqueId()+",false,0,-1,1","\uD83D\uDC64"); //Setup custom player head

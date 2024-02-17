@@ -32,7 +32,10 @@ public class onMessage implements Listener {
         TextColor colorPlayer = TextColor.color(255, 255, 255); //Set color of text to white (base for if the player doesn't have a team)
         char teamPlayer = 'タ'; //Set the tag of the player's team
 
-        if (player.hasPermission("group.rouge")) { //If the player is in team red
+        if (player.hasPermission("group.spectator")){
+            colorPlayer = TextColor.color(85, 85, 85); //Set color of text to red
+            teamPlayer = '露'; //Set the tag of the player's team
+        } else if (player.hasPermission("group.rouge")) { //If the player is in team red
             colorPlayer = TextColor.color(255, 85, 85); //Set color of text to red
             teamPlayer = 'ラ'; //Set the tag of the player's team
 
@@ -63,6 +66,11 @@ public class onMessage implements Listener {
         } else if (player.hasPermission("group.rose")) { //If the player is in team pink
             colorPlayer = TextColor.color(255, 85, 255); //Set color of text to pink
             teamPlayer = '目'; //Set the tag of the player's team
+        }
+
+        if (player.hasPermission("op")){
+            colorPlayer = TextColor.color(0, 0, 0); //Set color of text to pink
+            teamPlayer += 'リ'; //Set the tag of the player's team
         }
 
         if (bannedWordInMessage){

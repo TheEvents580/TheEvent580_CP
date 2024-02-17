@@ -31,7 +31,7 @@ public class main extends JavaPlugin{
 
         getCommand("starttp").setExecutor(new StartTp()); //Add the /starttp command to the plugin
         getCommand("gametp").setExecutor(new GameTp()); //Add the /gametp command to the plugin
-        getCommand("setrp").setExecutor(new SetRP()); //Add the /setrp command to the plugin
+        //getCommand("setrp").setExecutor(new SetRP()); //Add the /setrp command to the plugin
         getCommand("rideplayer").setExecutor(new Ride()); //Add the /rideplayer command to the plugin
         getCommand("points").setExecutor(new addAndRemovePoints(this)); //Add the /points command to the plugin
         getCommand("gamepoints").setExecutor(new addAndRemoveGamePoints(this)); //Add the /gamepoints command to the plugin

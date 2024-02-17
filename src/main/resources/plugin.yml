@@ -12,9 +12,9 @@ commands:
   gametp:
     description: Tp after games
     permission: op
-  setrp:
-      description: Set a rp to a player
-      permission: op
+  #setrp:
+  #    description: Set a rp to a player
+  #    permission: op
   rideplayer:
       description: Ride a player
       permission: op

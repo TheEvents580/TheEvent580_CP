@@ -30,47 +30,46 @@ public class onMessage implements Listener {
 
         Component componentPlayer = Component.translatable("%nox_uuid%" + player.getUniqueId() + ",false,0,-1,1", "\uD83D\uDC64"); //Setup custom player head
         TextColor colorPlayer = TextColor.color(255, 255, 255); //Set color of text to white (base for if the player doesn't have a team)
-        char teamPlayer = 'タ'; //Set the tag of the player's team
+        String teamPlayer = "タ"; //Set the tag of the player's team
 
         if (player.hasPermission("group.spectator")){
             colorPlayer = TextColor.color(85, 85, 85); //Set color of text to red
-            teamPlayer = '露'; //Set the tag of the player's team
+            teamPlayer = "露"; //Set the tag of the player's team
         } else if (player.hasPermission("group.rouge")) { //If the player is in team red
             colorPlayer = TextColor.color(255, 85, 85); //Set color of text to red
-            teamPlayer = 'ラ'; //Set the tag of the player's team
+            teamPlayer = "ラ"; //Set the tag of the player's team
 
         } else if (player.hasPermission("group.orange")) { //If the player is in team orange
             colorPlayer = TextColor.color(255, 170, 0); //Set color of text to orange
-            teamPlayer = 'ャ'; //Set the tag of the player's team
+            teamPlayer = "ャ"; //Set the tag of the player's team
 
         } else if (player.hasPermission("group.jaune")) { //If the player is in team yellow
             colorPlayer = TextColor.color(255, 255, 85); //Set color of text to yellow
-            teamPlayer = 'ギ'; //Set the tag of the player's team
+            teamPlayer = "ギ"; //Set the tag of the player's team
 
         } else if (player.hasPermission("group.vert")) { //If the player is in team lime / green
             colorPlayer = TextColor.color(85, 255, 85); //Set color of text to lime / green
-            teamPlayer = '画'; //Set the tag of the player's team
+            teamPlayer = "画"; //Set the tag of the player's team
 
         } else if (player.hasPermission("group.bleu_clair")) { //If the player is in team light blue
             colorPlayer = TextColor.color(85, 255, 255); //Set color of text to light blue
-            teamPlayer = '動'; //Set the tag of the player's team
+            teamPlayer = "動"; //Set the tag of the player's team
 
         } else if (player.hasPermission("group.bleu")) { //If the player is in team blue
             colorPlayer = TextColor.color(0, 0, 170); //Set color of text to blue
-            teamPlayer = '像'; //Set the tag of the player's team
+            teamPlayer = "像"; //Set the tag of the player's team
 
         } else if (player.hasPermission("group.violet")) { //If the player is in team purple
             colorPlayer = TextColor.color(170, 0, 170); //Set color of text to purple
-            teamPlayer = 'の'; //Set the tag of the player's team
+            teamPlayer = "の"; //Set the tag of the player's team
 
         } else if (player.hasPermission("group.rose")) { //If the player is in team pink
             colorPlayer = TextColor.color(255, 85, 255); //Set color of text to pink
-            teamPlayer = '目'; //Set the tag of the player's team
+            teamPlayer = "目"; //Set the tag of the player's team
         }
 
         if (player.hasPermission("op")){
-            colorPlayer = TextColor.color(0, 0, 0); //Set color of text to pink
-            teamPlayer += 'リ'; //Set the tag of the player's team
+            teamPlayer += "リ"; //Set the tag of the player's team
         }
 
         if (bannedWordInMessage){

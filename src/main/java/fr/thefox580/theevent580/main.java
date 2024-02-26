@@ -2,11 +2,9 @@ package fr.thefox580.theevent580;
 
 import fr.thefox580.theevent580.commands.*;
 import fr.thefox580.theevent580.listeners.*;
-import fr.thefox580.theevent580.tasks.*;
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitTask;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 public class main extends JavaPlugin{
@@ -52,8 +50,8 @@ public class main extends JavaPlugin{
         //getCommand("zone").setExecutor(new zone()); //Add the /zone command to the plugin
         getCommand("setsgheight").setExecutor(new setSGHeight(this)); //Add the /setsgheight to the plugin
         //getCommand("setgame").setExecutor(new setGame(this)); // Add the /setgame to the plugin
-        getCommand("tps").setExecutor(new TPS()); //Add the /tps to the plugin
-        getCommand("cpu").setExecutor(new CPUUsage()); // Add the /cpu to the plugin
+        //getCommand("tps").setExecutor(new TPS()); //Add the /tps to the plugin
+        //getCommand("cpu").setExecutor(new CPUUsage()); // Add the /cpu to the plugin
 
         getServer().getPluginManager().registerEvents(new onJoinEvent(this), this); //Registers the join message on player join to the plugin
         getServer().getPluginManager().registerEvents(new onLeaveEvent(this), this); //Registers the leave message on player leave to the plugin

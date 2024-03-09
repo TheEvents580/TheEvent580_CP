@@ -6,7 +6,7 @@
 
     <groupId>fr.thefox580</groupId>
     <artifactId>TheEvent580</artifactId>
-    <version>1.5.3</version>
+    <version>1.5.4</version>
     <packaging>jar</packaging>
 
     <name>TheEvent580</name>

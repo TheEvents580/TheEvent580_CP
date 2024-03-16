@@ -3,6 +3,7 @@ package fr.thefox580.theevent580.listeners;
 import fr.thefox580.theevent580.main;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -72,13 +73,16 @@ public class onDeathEvent implements Listener {
         event.setDeathMessage(""); //Clear death message
 
         if (killer == null){ //If player dies to a NPC
-            Component message = Component.text("[") //Set custom death message
+            String message = Component.text("[") //Set custom death message
                     .append(Component.text("☠",TextColor.color(255, 85, 85))) //Set custom death message
                     .append(Component.text("] " + teamVictim,TextColor.color(255, 255, 255))) //Set custom death message
                     .append(componentVictim)
                     .append(Component.text(' '+victim.getName(), colorVictim)) //Set custom death message
-                    .append(Component.text(killMessageFinal(),TextColor.color(170, 170, 170))); //Set custom death message
-            advMain.adventure().players().sendMessage(message);
+                    .append(Component.text(killMessageFinal(),TextColor.color(170, 170, 170))).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
         }
         else {
 
@@ -120,15 +124,18 @@ public class onDeathEvent implements Listener {
 
             }
 
-            Component message = Component.text('[') //Setup custom death message
+            String message = Component.text('[') //Setup custom death message
                     .append(Component.text('☠', TextColor.color(255, 85, 85))) /* ☠ */
                     .append(Component.text("] " + teamVictim, TextColor.color(255, 255, 255))) //I mean
                     .append(componentVictim) //Add custom victim head to message
                     .append(Component.text(' ' + victim.getName(), colorVictim)) //Add victim's name
                     .append(Component.text(" was killed by " + teamKiller, TextColor.color(255, 255, 255))) //Do I need to explain what this does ?
                     .append(componentKiller) //Add custom killer head to message
-                    .append(Component.text(' ' + killer.getName(), colorKiller)); //Add killer's name
-            advMain.adventure().players().sendMessage(message); //Send message
+                    .append(Component.text(' ' + killer.getName(), colorKiller)).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
         }
     }
 }

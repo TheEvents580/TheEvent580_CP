@@ -2,18 +2,18 @@ package fr.thefox580.theevent580;
 
 import fr.thefox580.theevent580.commands.*;
 import fr.thefox580.theevent580.listeners.*;
-import net.kyori.adventure.platform.bukkit.BukkitAudiences;
+import net.kyori.adventure.audience.Audience;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 public class main extends JavaPlugin{
 
-    private BukkitAudiences adventure;
+    private Audience adventure;
 
-    public @NonNull BukkitAudiences adventure() {
-        if (this.adventure == null){
-            throw new IllegalStateException("Tried to access Adventure when the plugin was disabled"); //Self-explanatory
+    public @NonNull Audience adventure() {
+        if(this.adventure == null) {
+            throw new IllegalStateException("Tried to access Adventure when the plugin was disabled!");
         }
         return this.adventure;
     }
@@ -22,8 +22,6 @@ public class main extends JavaPlugin{
     public void onEnable() {
         // Plugin startup logic
         Bukkit.getLogger().info("TheEvent580's plugin started"); //Send a message on plugin start
-
-        this.adventure = BukkitAudiences.create(this); //Implements Adventure to the plugin
 
         saveDefaultConfig(); //Saves the config in the plugin folder
 
@@ -78,6 +76,5 @@ public class main extends JavaPlugin{
     public void onDisable() {
         // Plugin shutdown logic
         Bukkit.getLogger().info("TheEvent580's plugin stopped"); //Send a message on plugin stop
-
     }
 }

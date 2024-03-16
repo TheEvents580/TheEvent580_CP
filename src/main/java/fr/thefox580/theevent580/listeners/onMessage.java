@@ -5,6 +5,7 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -80,183 +81,225 @@ public class onMessage implements Listener {
 
         else if (messageContent.equals(":skull:")){
 
-            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            String message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronoun_1." + player.getUniqueId()) + '/' + config.getString("pronoun_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
-                    .append(Component.text('☠')); //Set custom message
-            advMain.adventure().players().sendMessage(message); //Send custom message
+                    .append(Component.text('☠')).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
 
         }
 
         else if (messageContent.equals(":darkredlove:")){
 
-            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            String message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronoun_1." + player.getUniqueId()) + '/' + config.getString("pronoun_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
-                    .append(Component.text('❤', TextColor.color(170, 0, 0))); //Set custom message
-            advMain.adventure().players().sendMessage(message); //Send custom message
+                    .append(Component.text('❤', TextColor.color(170, 0, 0))).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
 
         }
 
         else if (messageContent.equals(":redlove:")){
 
-            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            String message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronoun_1." + player.getUniqueId()) + '/' + config.getString("pronoun_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
-                    .append(Component.text('❤', TextColor.color(255, 85, 85))); //Set custom message
-            advMain.adventure().players().sendMessage(message); //Send custom message
+                    .append(Component.text('❤', TextColor.color(255, 85, 85))).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
 
         }
 
         else if (messageContent.equals(":orangelove:")){
 
-            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            String message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronoun_1." + player.getUniqueId()) + '/' + config.getString("pronoun_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
-                    .append(Component.text('❤', TextColor.color(255, 170, 0))); //Set custom message
-            advMain.adventure().players().sendMessage(message); //Send custom message
+                    .append(Component.text('❤', TextColor.color(255, 170, 0))).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
 
         }
 
         else if (messageContent.equals(":yellowlove:")){
 
-            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            String message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronoun_1." + player.getUniqueId()) + '/' + config.getString("pronoun_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
-                    .append(Component.text('❤', TextColor.color(255, 255, 85))); //Set custom message
-            advMain.adventure().players().sendMessage(message); //Send custom message
+                    .append(Component.text('❤', TextColor.color(255, 255, 85))).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
 
         }
 
         else if (messageContent.equals(":limelove:")){
 
-            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            String message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronoun_1." + player.getUniqueId()) + '/' + config.getString("pronoun_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
-                    .append(Component.text('❤', TextColor.color(85, 255, 85))); //Set custom message
-            advMain.adventure().players().sendMessage(message); //Send custom message
+                    .append(Component.text('❤', TextColor.color(85, 255, 85))).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
 
         }
 
         else if (messageContent.equals(":greenlove:")){
 
-            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            String message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronoun_1." + player.getUniqueId()) + '/' + config.getString("pronoun_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
-                    .append(Component.text('❤', TextColor.color(0, 170, 0))); //Set custom message
-            advMain.adventure().players().sendMessage(message); //Send custom message
+                    .append(Component.text('❤', TextColor.color(0, 170, 0))).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
 
         }
 
         else if (messageContent.equals(":cyanlove:")){
 
-            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            String message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronoun_1." + player.getUniqueId()) + '/' + config.getString("pronoun_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
-                    .append(Component.text('❤', TextColor.color(0, 170, 170))); //Set custom message
-            advMain.adventure().players().sendMessage(message); //Send custom message
+                    .append(Component.text('❤', TextColor.color(0, 170, 170))).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
 
         }
 
         else if (messageContent.equals(":lightbluelove:")){
 
-            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            String message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronoun_1." + player.getUniqueId()) + '/' + config.getString("pronoun_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
-                    .append(Component.text('❤', TextColor.color(85, 255, 255))); //Set custom message
-            advMain.adventure().players().sendMessage(message); //Send custom message
+                    .append(Component.text('❤', TextColor.color(85, 255, 255))).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
 
         }
 
         else if (messageContent.equals(":bluelove:")){
 
-            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            String message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronoun_1." + player.getUniqueId()) + '/' + config.getString("pronoun_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
-                    .append(Component.text('❤', TextColor.color(85, 85, 255))); //Set custom message
-            advMain.adventure().players().sendMessage(message); //Send custom message
+                    .append(Component.text('❤', TextColor.color(85, 85, 255))).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
 
         }
 
         else if (messageContent.equals(":darkbluelove:")){
 
-            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            String message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronoun_1." + player.getUniqueId()) + '/' + config.getString("pronoun_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
-                    .append(Component.text('❤', TextColor.color(0, 0, 170))); //Set custom message
-            advMain.adventure().players().sendMessage(message); //Send custom message
+                    .append(Component.text('❤', TextColor.color(0, 0, 170))).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
 
         }
 
         else if (messageContent.equals(":purplelove:")){
 
-            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            String message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronoun_1." + player.getUniqueId()) + '/' + config.getString("pronoun_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
-                    .append(Component.text('❤', TextColor.color(170, 0, 170))); //Set custom message
-            advMain.adventure().players().sendMessage(message); //Send custom message
+                    .append(Component.text('❤', TextColor.color(170, 0, 170))).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
 
         }
 
         else if (messageContent.equals(":pinklove:")){
 
-            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            String message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronoun_1." + player.getUniqueId()) + '/' + config.getString("pronoun_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
-                    .append(Component.text('❤', TextColor.color(255, 85, 255))); //Set custom message
-            advMain.adventure().players().sendMessage(message); //Send custom message
+                    .append(Component.text('❤', TextColor.color(255, 85, 255))).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
 
         }
 
         else {
 
-            Component message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
+            String message = Component.text(teamPlayer, TextColor.color(255, 255, 255)) //Set custom message
                     .append(Component.text(' ')) //Set custom message
                     .append(componentPlayer) //Set custom message
                     .append(Component.text( ' ' + config.getString("pronoun_1." + player.getUniqueId()) + '/' + config.getString("pronoun_2." + player.getUniqueId())))
                     .append(Component.text(' ' + player.getName(), colorPlayer)) //Set custom message
                     .append(Component.text(" > ", TextColor.color(255, 255, 255))) //Set custom message
-                    .append(Component.text(messageContent)); //Set custom message
-            advMain.adventure().players().sendMessage(message); //Send custom message
+                    .append(Component.text(messageContent)).toBuilder().build().content(); //Set custom message
+
+            for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                loopPlayer.sendMessage(message);
+            }
         }
 
         //event.setMessage("");

@@ -6,7 +6,7 @@
 
     <groupId>fr.thefox580</groupId>
     <artifactId>TheEvent580</artifactId>
-    <version>1.5.4</version>
+    <version>1.5.5</version>
     <packaging>jar</packaging>
 
     <name>TheEvent580</name>
@@ -95,8 +95,8 @@
         </dependency>
         <dependency>
             <groupId>net.kyori</groupId>
-            <artifactId>adventure-platform-bukkit</artifactId>
-            <version>4.3.0</version>
+            <artifactId>adventure-api</artifactId>
+            <version>4.16.0</version>
         </dependency>
         <dependency>
             <groupId>me.superneon4ik</groupId>

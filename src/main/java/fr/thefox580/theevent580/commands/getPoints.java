@@ -73,11 +73,15 @@ public class getPoints implements CommandExecutor {
 
                     }
 
-                    advMain.adventure().player(sender).sendMessage(Component.text("Player ")
+                    String message = Component.text("Player ")
                             .append(component)
                             .append(Component.text(' ')
                             .append(Component.text(sender.getName(), TextColor.color(color))
-                            .append(Component.text(" currently has " + strPointsPlayer + " points", TextColor.color(255, 255, 255))))));
+                            .append(Component.text(" currently has " + strPointsPlayer + " points", TextColor.color(255, 255, 255))))).toBuilder().build().content(); //Set custom message
+
+                    for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+                        loopPlayer.sendMessage(message);
+                    };
                 }
                 else {
                     commandSender.sendMessage("Player " + player.getName() + " currently has " + pointsPlayer + " points");

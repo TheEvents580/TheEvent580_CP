@@ -2,7 +2,9 @@ package fr.thefox580.theevent580.listeners;
 import fr.thefox580.theevent580.main;
 
 import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.format.TextColor;
+import net.md_5.bungee.api.chat.BaseComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -82,7 +84,7 @@ public class onJoinEvent implements Listener {
             }
         }
         Component message = getPlayerJoinComponent(component, player, color); //Setup join message
-        advMain.adventure().players().sendMessage(message); //Send join message
+        this.advMain.adventure().sendMessage(message);
         if (System.currentTimeMillis() / 1000 < 1711825200) { //If the time is before March 30, 2024, at 8:PM CET
             if (player.isWhitelisted()){ //If the player is whitelisted
                 if (!player.hasPermission("theevent580.tester")){ //If the player is not a tester
@@ -97,7 +99,8 @@ public class onJoinEvent implements Listener {
 
     @NotNull
     private static Component getPlayerJoinComponent(Component component, Player player, TextColor color) { //Setup join message
-        return Component.text('[') //Setup part 1
+
+        return Component.text('[')
                 .append(Component.text('+', TextColor.color(85, 255, 85))) //Setup part 2
                 .append(Component.text("] ", TextColor.color(255, 255, 255))) //Setup part 3
                 .append(component) //Add custom player head to the message

@@ -72,16 +72,19 @@ public class onLeaveEvent implements Listener {
                 }
             }
         }
-        Component message = getPlayerLeaveComponent(component, player, color); //Setup leaving message
-        advMain.adventure().players().sendMessage(message); //Send leaving message
+        String message = getPlayerLeaveComponent(component, player, color); //Setup leaving message
+
+        for (Player loopPlayer : Bukkit.getOnlinePlayers()){
+            loopPlayer.sendMessage(message);
+        }
     }
 
     @NotNull
-    private static Component getPlayerLeaveComponent(Component component, Player player, TextColor color) { //Setup leaving message
+    private static String getPlayerLeaveComponent(Component component, Player player, TextColor color) { //Setup leaving message
         return Component.text('[') //Setup part 1
                 .append(Component.text('-', TextColor.color(255, 85, 85))) //Setup part 2
                 .append(Component.text("] ", TextColor.color(255, 255, 255))) //Setup part 3
                 .append(component) //Add custom player head to the message
-                .append(Component.text(" "+ player.getName(), color)); //Add player's name to the message
+                .append(Component.text(" "+ player.getName(), color)).toBuilder().build().content(); //Add player's name to the message
     }
 }
